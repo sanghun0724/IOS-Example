@@ -15,32 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDG-SB-mje">
-                                <rect key="frame" x="113.5" y="258" width="187" height="189"/>
-                                <state key="normal" image="button_play"/>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="A2Q-p0-8ub">
-                                <rect key="frame" x="53" y="526" width="298" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghe-gU-hqK">
+                                <rect key="frame" x="81" y="252" width="189" height="189"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="n7T-ym-lns"/>
+                                    <constraint firstAttribute="width" secondItem="ghe-gU-hqK" secondAttribute="height" multiplier="1:1" id="fOl-qF-Fvg"/>
                                 </constraints>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbD-MN-eAY">
-                                <rect key="frame" x="186" y="469" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="button_play"/>
+                                <state key="selected" image="button_pause"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJR-Tr-m87">
+                                <rect key="frame" x="137.5" y="449" width="76" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ko-RN-LRv">
+                                <rect key="frame" x="34" y="478" width="347" height="31"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wbD-MN-eAY" firstAttribute="centerX" secondItem="zDG-SB-mje" secondAttribute="centerX" id="11G-xo-jBX"/>
-                            <constraint firstItem="wbD-MN-eAY" firstAttribute="top" secondItem="zDG-SB-mje" secondAttribute="bottom" constant="22" id="4y2-Ph-7bH"/>
-                            <constraint firstItem="zDG-SB-mje" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="Dr9-bV-AyW"/>
-                            <constraint firstItem="zDG-SB-mje" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GVb-nI-A3Q"/>
-                            <constraint firstItem="A2Q-p0-8ub" firstAttribute="centerX" secondItem="zDG-SB-mje" secondAttribute="centerX" constant="-5" id="X0Z-SE-C7U"/>
-                            <constraint firstItem="A2Q-p0-8ub" firstAttribute="top" secondItem="wbD-MN-eAY" secondAttribute="bottom" constant="36" id="bQ3-JI-OZ7"/>
-                            <constraint firstItem="A2Q-p0-8ub" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="fqo-bi-Ypt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Ko-RN-LRv" secondAttribute="trailing" constant="35" id="1lI-Ha-TPK"/>
+                            <constraint firstItem="7Ko-RN-LRv" firstAttribute="centerX" secondItem="uJR-Tr-m87" secondAttribute="centerX" constant="32" id="9fH-sR-9YR"/>
+                            <constraint firstItem="7Ko-RN-LRv" firstAttribute="top" secondItem="uJR-Tr-m87" secondAttribute="bottom" constant="8" id="AgE-Un-T9e"/>
+                            <constraint firstItem="uJR-Tr-m87" firstAttribute="centerX" secondItem="ghe-gU-hqK" secondAttribute="centerX" id="BDk-fq-YZp"/>
+                            <constraint firstItem="ghe-gU-hqK" firstAttribute="width" secondItem="ghe-gU-hqK" secondAttribute="height" multiplier="1:1" id="JWL-cK-EaI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Ko-RN-LRv" secondAttribute="bottom" constant="354" id="cBu-3P-WTj"/>
+                            <constraint firstItem="uJR-Tr-m87" firstAttribute="top" secondItem="ghe-gU-hqK" secondAttribute="bottom" constant="8" id="fOb-Ci-eNC"/>
+                            <constraint firstItem="7Ko-RN-LRv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="yFI-s3-D8a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -51,6 +54,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button_pause" width="185" height="185"/>
         <image name="button_play" width="187" height="189"/>
     </resources>
 </document>

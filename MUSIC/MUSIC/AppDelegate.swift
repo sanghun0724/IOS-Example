@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  FisrtMusicPlayer
+//  MUSIC
 //
 //  Created by sangheon on 2020/09/13.
 //  Copyright © 2020 sangheon. All rights reserved.
@@ -10,7 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-        var window: UIWindow?
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

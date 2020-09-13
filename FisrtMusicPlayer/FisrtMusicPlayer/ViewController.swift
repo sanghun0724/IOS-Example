@@ -22,6 +22,9 @@ class ViewController: UIViewController , AVAudioPlayerDelegate{
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addViewWithCode()
+        self.initializePlayer()
+        
 
     }
      
@@ -72,6 +75,9 @@ class ViewController: UIViewController , AVAudioPlayerDelegate{
         self.timer = nil
     }
     func addViewWithCode(){
+        self.addplayPauseButton()
+               self.addTimeLabel()
+               self.addProgressSlider()
     
     }
     
@@ -90,9 +96,78 @@ class ViewController: UIViewController , AVAudioPlayerDelegate{
         centerX = button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         
         let centerY: NSLayoutConstraint
-        centerY = NSLayoutConstraint(item: button, attribute:NSLayoutConstraint.Attribute.centerY relatedBy: <#T##NSLayoutConstraint.Relation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutConstraint.Attribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
+        centerY = NSLayoutConstraint(item: button, attribute:NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 0.8, constant: 0)
+        
+        let width:NSLayoutConstraint
+        width = button.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5)
+        
+        let ratio:NSLayoutConstraint
+        ratio = button.heightAnchor.constraint(equalTo: button.widthAnchor, multiplier: 1)
+        
+        centerY.isActive = true
+        centerX.isActive = true
+        width.isActive = true
+        ratio.isActive = true
+        
+        self.playPauseButton = button
+        
     }
     
+    func addTimeLabel() {
+        let timeLabel:UILabel = UILabel()
+        timeLabel.translatesAutoresizingMaskIntoConstraints = true
+        
+        self.view.addSubview(timeLabel)
+        
+        timeLabel.textColor=UIColor.black
+        timeLabel.textAlignment = NSTextAlignment.center
+        timeLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
+        
+        let centerX: NSLayoutConstraint
+        centerX = timeLabel.centerXAnchor.constraint(equalTo: self.playPauseButton.centerXAnchor)
+        
+        let top:NSLayoutConstraint
+        top = timeLabel.topAnchor.constraint(equalTo: self.playPauseButton.bottomAnchor,constant: 8)
+        
+        centerX.isActive = true
+        top.isActive = true
+        
+        self.timeLabel = timeLabel
+        self.updateTimeLabelText(time: 0)
+    }
+    
+    func addProgressSlider() {
+        let slider:UISlider = UISlider()
+        slider.translatesAutoresizingMaskIntoConstraints = true
+        
+        self.view.addSubview(slider)
+        
+        slider.maximumTrackTintColor = UIColor.red
+        slider.addTarget(self, action: #selector(self.sliderValueChanged(_:)), for: UIControl.Event.valueChanged)
+        
+        let safeAreaGuide: UILayoutGuide = self.view.safeAreaLayoutGuide
+        
+        let centerX: NSLayoutConstraint
+               centerX = slider.centerXAnchor.constraint(equalTo: self.timeLabel.centerXAnchor)
+               
+               let top: NSLayoutConstraint
+               top = slider.topAnchor.constraint(equalTo: self.timeLabel.bottomAnchor, constant: 8)
+               
+               let leading: NSLayoutConstraint
+               leading = slider.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 16)
+               
+               let trailing: NSLayoutConstraint
+               trailing = slider.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -16)
+               
+               centerX.isActive = true
+               top.isActive = true
+               leading.isActive = true
+               trailing.isActive = true
+        
+        self.progressSlider = slider
+        
+        
+    }
     
     
     
