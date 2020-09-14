@@ -1,0 +1,16 @@
+import Foundation
+
+//열거형 갑시다 = 정해준값 이외의 추가/ 수정 불가능!
+//열거형은 열거형 자체로 고유타입으로 인정되기 때문에 타입으로인한 버그가 업써영
+//MARK: enum
+enum school {
+    case priamry
+    case elementary
+    case middle
+    case high
+    case colleage
+    case university
+    case graduate
+}
+
+

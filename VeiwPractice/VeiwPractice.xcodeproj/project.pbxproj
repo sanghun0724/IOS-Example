@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6E649AA250E58EA000F455E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649A9250E58EA000F455E /* AppDelegate.swift */; };
-		B6E649AC250E58EA000F455E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649AB250E58EA000F455E /* SceneDelegate.swift */; };
-		B6E649AE250E58EA000F455E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649AD250E58EA000F455E /* ViewController.swift */; };
-		B6E649B1250E58EA000F455E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E649AF250E58EA000F455E /* Main.storyboard */; };
-		B6E649B3250E58EC000F455E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E649B2250E58EC000F455E /* Assets.xcassets */; };
-		B6E649B6250E58EC000F455E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E649B4250E58EC000F455E /* LaunchScreen.storyboard */; };
-		B6E649C1250E58EC000F455E /* MUSICTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649C0250E58EC000F455E /* MUSICTests.swift */; };
-		B6E649CC250E58EC000F455E /* MUSICUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649CB250E58EC000F455E /* MUSICUITests.swift */; };
+		B6E649E6250F32BB000F455E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649E5250F32BB000F455E /* AppDelegate.swift */; };
+		B6E649E8250F32BB000F455E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649E7250F32BB000F455E /* SceneDelegate.swift */; };
+		B6E649EA250F32BB000F455E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649E9250F32BB000F455E /* ViewController.swift */; };
+		B6E649ED250F32BB000F455E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E649EB250F32BB000F455E /* Main.storyboard */; };
+		B6E649EF250F32BE000F455E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E649EE250F32BE000F455E /* Assets.xcassets */; };
+		B6E649F2250F32BE000F455E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E649F0250F32BE000F455E /* LaunchScreen.storyboard */; };
+		B6E649FD250F32BE000F455E /* VeiwPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E649FC250F32BE000F455E /* VeiwPracticeTests.swift */; };
+		B6E64A08250F32BE000F455E /* VeiwPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E64A07250F32BE000F455E /* VeiwPracticeUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B6E649BD250E58EC000F455E /* PBXContainerItemProxy */ = {
+		B6E649F9250F32BE000F455E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B6E6499E250E58EA000F455E /* Project object */;
+			containerPortal = B6E649DA250F32BB000F455E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B6E649A5250E58EA000F455E;
-			remoteInfo = MUSIC;
+			remoteGlobalIDString = B6E649E1250F32BB000F455E;
+			remoteInfo = VeiwPractice;
 		};
-		B6E649C8250E58EC000F455E /* PBXContainerItemProxy */ = {
+		B6E64A04250F32BE000F455E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B6E6499E250E58EA000F455E /* Project object */;
+			containerPortal = B6E649DA250F32BB000F455E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B6E649A5250E58EA000F455E;
-			remoteInfo = MUSIC;
+			remoteGlobalIDString = B6E649E1250F32BB000F455E;
+			remoteInfo = VeiwPractice;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B6E649A6250E58EA000F455E /* MUSIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MUSIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6E649A9250E58EA000F455E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6E649AB250E58EA000F455E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6E649AD250E58EA000F455E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6E649B0250E58EA000F455E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B6E649B2250E58EC000F455E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B6E649B5250E58EC000F455E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B6E649B7250E58EC000F455E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6E649BC250E58EC000F455E /* MUSICTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MUSICTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6E649C0250E58EC000F455E /* MUSICTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUSICTests.swift; sourceTree = "<group>"; };
-		B6E649C2250E58EC000F455E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6E649C7250E58EC000F455E /* MUSICUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MUSICUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6E649CB250E58EC000F455E /* MUSICUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUSICUITests.swift; sourceTree = "<group>"; };
-		B6E649CD250E58EC000F455E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E649E2250F32BB000F455E /* VeiwPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeiwPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E649E5250F32BB000F455E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6E649E7250F32BB000F455E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B6E649E9250F32BB000F455E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B6E649EC250F32BB000F455E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B6E649EE250F32BE000F455E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6E649F1250F32BE000F455E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6E649F3250F32BE000F455E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E649F8250F32BE000F455E /* VeiwPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeiwPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E649FC250F32BE000F455E /* VeiwPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiwPracticeTests.swift; sourceTree = "<group>"; };
+		B6E649FE250F32BE000F455E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E64A03250F32BE000F455E /* VeiwPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeiwPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E64A07250F32BE000F455E /* VeiwPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeiwPracticeUITests.swift; sourceTree = "<group>"; };
+		B6E64A09250F32BE000F455E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B6E649A3250E58EA000F455E /* Frameworks */ = {
+		B6E649DF250F32BB000F455E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6E649B9250E58EC000F455E /* Frameworks */ = {
+		B6E649F5250F32BE000F455E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6E649C4250E58EC000F455E /* Frameworks */ = {
+		B6E64A00250F32BE000F455E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,138 +76,138 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B6E6499D250E58EA000F455E = {
+		B6E649D9250F32BB000F455E = {
 			isa = PBXGroup;
 			children = (
-				B6E649A8250E58EA000F455E /* MUSIC */,
-				B6E649BF250E58EC000F455E /* MUSICTests */,
-				B6E649CA250E58EC000F455E /* MUSICUITests */,
-				B6E649A7250E58EA000F455E /* Products */,
+				B6E649E4250F32BB000F455E /* VeiwPractice */,
+				B6E649FB250F32BE000F455E /* VeiwPracticeTests */,
+				B6E64A06250F32BE000F455E /* VeiwPracticeUITests */,
+				B6E649E3250F32BB000F455E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B6E649A7250E58EA000F455E /* Products */ = {
+		B6E649E3250F32BB000F455E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B6E649A6250E58EA000F455E /* MUSIC.app */,
-				B6E649BC250E58EC000F455E /* MUSICTests.xctest */,
-				B6E649C7250E58EC000F455E /* MUSICUITests.xctest */,
+				B6E649E2250F32BB000F455E /* VeiwPractice.app */,
+				B6E649F8250F32BE000F455E /* VeiwPracticeTests.xctest */,
+				B6E64A03250F32BE000F455E /* VeiwPracticeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B6E649A8250E58EA000F455E /* MUSIC */ = {
+		B6E649E4250F32BB000F455E /* VeiwPractice */ = {
 			isa = PBXGroup;
 			children = (
-				B6E649A9250E58EA000F455E /* AppDelegate.swift */,
-				B6E649AB250E58EA000F455E /* SceneDelegate.swift */,
-				B6E649AD250E58EA000F455E /* ViewController.swift */,
-				B6E649AF250E58EA000F455E /* Main.storyboard */,
-				B6E649B2250E58EC000F455E /* Assets.xcassets */,
-				B6E649B4250E58EC000F455E /* LaunchScreen.storyboard */,
-				B6E649B7250E58EC000F455E /* Info.plist */,
+				B6E649E5250F32BB000F455E /* AppDelegate.swift */,
+				B6E649E7250F32BB000F455E /* SceneDelegate.swift */,
+				B6E649E9250F32BB000F455E /* ViewController.swift */,
+				B6E649EB250F32BB000F455E /* Main.storyboard */,
+				B6E649EE250F32BE000F455E /* Assets.xcassets */,
+				B6E649F0250F32BE000F455E /* LaunchScreen.storyboard */,
+				B6E649F3250F32BE000F455E /* Info.plist */,
 			);
-			path = MUSIC;
+			path = VeiwPractice;
 			sourceTree = "<group>";
 		};
-		B6E649BF250E58EC000F455E /* MUSICTests */ = {
+		B6E649FB250F32BE000F455E /* VeiwPracticeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B6E649C0250E58EC000F455E /* MUSICTests.swift */,
-				B6E649C2250E58EC000F455E /* Info.plist */,
+				B6E649FC250F32BE000F455E /* VeiwPracticeTests.swift */,
+				B6E649FE250F32BE000F455E /* Info.plist */,
 			);
-			path = MUSICTests;
+			path = VeiwPracticeTests;
 			sourceTree = "<group>";
 		};
-		B6E649CA250E58EC000F455E /* MUSICUITests */ = {
+		B6E64A06250F32BE000F455E /* VeiwPracticeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B6E649CB250E58EC000F455E /* MUSICUITests.swift */,
-				B6E649CD250E58EC000F455E /* Info.plist */,
+				B6E64A07250F32BE000F455E /* VeiwPracticeUITests.swift */,
+				B6E64A09250F32BE000F455E /* Info.plist */,
 			);
-			path = MUSICUITests;
+			path = VeiwPracticeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B6E649A5250E58EA000F455E /* MUSIC */ = {
+		B6E649E1250F32BB000F455E /* VeiwPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6E649D0250E58EC000F455E /* Build configuration list for PBXNativeTarget "MUSIC" */;
+			buildConfigurationList = B6E64A0C250F32BE000F455E /* Build configuration list for PBXNativeTarget "VeiwPractice" */;
 			buildPhases = (
-				B6E649A2250E58EA000F455E /* Sources */,
-				B6E649A3250E58EA000F455E /* Frameworks */,
-				B6E649A4250E58EA000F455E /* Resources */,
+				B6E649DE250F32BB000F455E /* Sources */,
+				B6E649DF250F32BB000F455E /* Frameworks */,
+				B6E649E0250F32BB000F455E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MUSIC;
-			productName = MUSIC;
-			productReference = B6E649A6250E58EA000F455E /* MUSIC.app */;
+			name = VeiwPractice;
+			productName = VeiwPractice;
+			productReference = B6E649E2250F32BB000F455E /* VeiwPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B6E649BB250E58EC000F455E /* MUSICTests */ = {
+		B6E649F7250F32BE000F455E /* VeiwPracticeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6E649D3250E58EC000F455E /* Build configuration list for PBXNativeTarget "MUSICTests" */;
+			buildConfigurationList = B6E64A0F250F32BE000F455E /* Build configuration list for PBXNativeTarget "VeiwPracticeTests" */;
 			buildPhases = (
-				B6E649B8250E58EC000F455E /* Sources */,
-				B6E649B9250E58EC000F455E /* Frameworks */,
-				B6E649BA250E58EC000F455E /* Resources */,
+				B6E649F4250F32BE000F455E /* Sources */,
+				B6E649F5250F32BE000F455E /* Frameworks */,
+				B6E649F6250F32BE000F455E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B6E649BE250E58EC000F455E /* PBXTargetDependency */,
+				B6E649FA250F32BE000F455E /* PBXTargetDependency */,
 			);
-			name = MUSICTests;
-			productName = MUSICTests;
-			productReference = B6E649BC250E58EC000F455E /* MUSICTests.xctest */;
+			name = VeiwPracticeTests;
+			productName = VeiwPracticeTests;
+			productReference = B6E649F8250F32BE000F455E /* VeiwPracticeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B6E649C6250E58EC000F455E /* MUSICUITests */ = {
+		B6E64A02250F32BE000F455E /* VeiwPracticeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6E649D6250E58EC000F455E /* Build configuration list for PBXNativeTarget "MUSICUITests" */;
+			buildConfigurationList = B6E64A12250F32BE000F455E /* Build configuration list for PBXNativeTarget "VeiwPracticeUITests" */;
 			buildPhases = (
-				B6E649C3250E58EC000F455E /* Sources */,
-				B6E649C4250E58EC000F455E /* Frameworks */,
-				B6E649C5250E58EC000F455E /* Resources */,
+				B6E649FF250F32BE000F455E /* Sources */,
+				B6E64A00250F32BE000F455E /* Frameworks */,
+				B6E64A01250F32BE000F455E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B6E649C9250E58EC000F455E /* PBXTargetDependency */,
+				B6E64A05250F32BE000F455E /* PBXTargetDependency */,
 			);
-			name = MUSICUITests;
-			productName = MUSICUITests;
-			productReference = B6E649C7250E58EC000F455E /* MUSICUITests.xctest */;
+			name = VeiwPracticeUITests;
+			productName = VeiwPracticeUITests;
+			productReference = B6E64A03250F32BE000F455E /* VeiwPracticeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B6E6499E250E58EA000F455E /* Project object */ = {
+		B6E649DA250F32BB000F455E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = sangheon;
 				TargetAttributes = {
-					B6E649A5250E58EA000F455E = {
+					B6E649E1250F32BB000F455E = {
 						CreatedOnToolsVersion = 11.7;
 					};
-					B6E649BB250E58EC000F455E = {
+					B6E649F7250F32BE000F455E = {
 						CreatedOnToolsVersion = 11.7;
-						TestTargetID = B6E649A5250E58EA000F455E;
+						TestTargetID = B6E649E1250F32BB000F455E;
 					};
-					B6E649C6250E58EC000F455E = {
+					B6E64A02250F32BE000F455E = {
 						CreatedOnToolsVersion = 11.7;
-						TestTargetID = B6E649A5250E58EA000F455E;
+						TestTargetID = B6E649E1250F32BB000F455E;
 					};
 				};
 			};
-			buildConfigurationList = B6E649A1250E58EA000F455E /* Build configuration list for PBXProject "MUSIC" */;
+			buildConfigurationList = B6E649DD250F32BB000F455E /* Build configuration list for PBXProject "VeiwPractice" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,37 +215,37 @@
 				en,
 				Base,
 			);
-			mainGroup = B6E6499D250E58EA000F455E;
-			productRefGroup = B6E649A7250E58EA000F455E /* Products */;
+			mainGroup = B6E649D9250F32BB000F455E;
+			productRefGroup = B6E649E3250F32BB000F455E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B6E649A5250E58EA000F455E /* MUSIC */,
-				B6E649BB250E58EC000F455E /* MUSICTests */,
-				B6E649C6250E58EC000F455E /* MUSICUITests */,
+				B6E649E1250F32BB000F455E /* VeiwPractice */,
+				B6E649F7250F32BE000F455E /* VeiwPracticeTests */,
+				B6E64A02250F32BE000F455E /* VeiwPracticeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B6E649A4250E58EA000F455E /* Resources */ = {
+		B6E649E0250F32BB000F455E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E649B6250E58EC000F455E /* LaunchScreen.storyboard in Resources */,
-				B6E649B3250E58EC000F455E /* Assets.xcassets in Resources */,
-				B6E649B1250E58EA000F455E /* Main.storyboard in Resources */,
+				B6E649F2250F32BE000F455E /* LaunchScreen.storyboard in Resources */,
+				B6E649EF250F32BE000F455E /* Assets.xcassets in Resources */,
+				B6E649ED250F32BB000F455E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6E649BA250E58EC000F455E /* Resources */ = {
+		B6E649F6250F32BE000F455E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6E649C5250E58EC000F455E /* Resources */ = {
+		B6E64A01250F32BE000F455E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,60 +255,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B6E649A2250E58EA000F455E /* Sources */ = {
+		B6E649DE250F32BB000F455E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E649AE250E58EA000F455E /* ViewController.swift in Sources */,
-				B6E649AA250E58EA000F455E /* AppDelegate.swift in Sources */,
-				B6E649AC250E58EA000F455E /* SceneDelegate.swift in Sources */,
+				B6E649EA250F32BB000F455E /* ViewController.swift in Sources */,
+				B6E649E6250F32BB000F455E /* AppDelegate.swift in Sources */,
+				B6E649E8250F32BB000F455E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6E649B8250E58EC000F455E /* Sources */ = {
+		B6E649F4250F32BE000F455E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E649C1250E58EC000F455E /* MUSICTests.swift in Sources */,
+				B6E649FD250F32BE000F455E /* VeiwPracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6E649C3250E58EC000F455E /* Sources */ = {
+		B6E649FF250F32BE000F455E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E649CC250E58EC000F455E /* MUSICUITests.swift in Sources */,
+				B6E64A08250F32BE000F455E /* VeiwPracticeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B6E649BE250E58EC000F455E /* PBXTargetDependency */ = {
+		B6E649FA250F32BE000F455E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B6E649A5250E58EA000F455E /* MUSIC */;
-			targetProxy = B6E649BD250E58EC000F455E /* PBXContainerItemProxy */;
+			target = B6E649E1250F32BB000F455E /* VeiwPractice */;
+			targetProxy = B6E649F9250F32BE000F455E /* PBXContainerItemProxy */;
 		};
-		B6E649C9250E58EC000F455E /* PBXTargetDependency */ = {
+		B6E64A05250F32BE000F455E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B6E649A5250E58EA000F455E /* MUSIC */;
-			targetProxy = B6E649C8250E58EC000F455E /* PBXContainerItemProxy */;
+			target = B6E649E1250F32BB000F455E /* VeiwPractice */;
+			targetProxy = B6E64A04250F32BE000F455E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B6E649AF250E58EA000F455E /* Main.storyboard */ = {
+		B6E649EB250F32BB000F455E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B6E649B0250E58EA000F455E /* Base */,
+				B6E649EC250F32BB000F455E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B6E649B4250E58EC000F455E /* LaunchScreen.storyboard */ = {
+		B6E649F0250F32BE000F455E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B6E649B5250E58EC000F455E /* Base */,
+				B6E649F1250F32BE000F455E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B6E649CE250E58EC000F455E /* Debug */ = {
+		B6E64A0A250F32BE000F455E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -376,7 +376,7 @@
 			};
 			name = Debug;
 		};
-		B6E649CF250E58EC000F455E /* Release */ = {
+		B6E64A0B250F32BE000F455E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -420,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -430,166 +430,166 @@
 			};
 			name = Release;
 		};
-		B6E649D1250E58EC000F455E /* Debug */ = {
+		B6E64A0D250F32BE000F455E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				INFOPLIST_FILE = MUSIC/Info.plist;
+				INFOPLIST_FILE = VeiwPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kimchi.MUSIC;
+				PRODUCT_BUNDLE_IDENTIFIER = kimchi.VeiwPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B6E649D2250E58EC000F455E /* Release */ = {
+		B6E64A0E250F32BE000F455E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				INFOPLIST_FILE = MUSIC/Info.plist;
+				INFOPLIST_FILE = VeiwPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kimchi.MUSIC;
+				PRODUCT_BUNDLE_IDENTIFIER = kimchi.VeiwPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		B6E649D4250E58EC000F455E /* Debug */ = {
+		B6E64A10250F32BE000F455E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				INFOPLIST_FILE = MUSICTests/Info.plist;
+				INFOPLIST_FILE = VeiwPracticeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kimchi.MUSICTests;
+				PRODUCT_BUNDLE_IDENTIFIER = kimchi.VeiwPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MUSIC.app/MUSIC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeiwPractice.app/VeiwPractice";
 			};
 			name = Debug;
 		};
-		B6E649D5250E58EC000F455E /* Release */ = {
+		B6E64A11250F32BE000F455E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				INFOPLIST_FILE = MUSICTests/Info.plist;
+				INFOPLIST_FILE = VeiwPracticeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kimchi.MUSICTests;
+				PRODUCT_BUNDLE_IDENTIFIER = kimchi.VeiwPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MUSIC.app/MUSIC";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeiwPractice.app/VeiwPractice";
 			};
 			name = Release;
 		};
-		B6E649D7250E58EC000F455E /* Debug */ = {
+		B6E64A13250F32BE000F455E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				INFOPLIST_FILE = MUSICUITests/Info.plist;
+				INFOPLIST_FILE = VeiwPracticeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kimchi.MUSICUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = kimchi.VeiwPracticeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MUSIC;
+				TEST_TARGET_NAME = VeiwPractice;
 			};
 			name = Debug;
 		};
-		B6E649D8250E58EC000F455E /* Release */ = {
+		B6E64A14250F32BE000F455E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				INFOPLIST_FILE = MUSICUITests/Info.plist;
+				INFOPLIST_FILE = VeiwPracticeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kimchi.MUSICUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = kimchi.VeiwPracticeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MUSIC;
+				TEST_TARGET_NAME = VeiwPractice;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B6E649A1250E58EA000F455E /* Build configuration list for PBXProject "MUSIC" */ = {
+		B6E649DD250F32BB000F455E /* Build configuration list for PBXProject "VeiwPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6E649CE250E58EC000F455E /* Debug */,
-				B6E649CF250E58EC000F455E /* Release */,
+				B6E64A0A250F32BE000F455E /* Debug */,
+				B6E64A0B250F32BE000F455E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6E649D0250E58EC000F455E /* Build configuration list for PBXNativeTarget "MUSIC" */ = {
+		B6E64A0C250F32BE000F455E /* Build configuration list for PBXNativeTarget "VeiwPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6E649D1250E58EC000F455E /* Debug */,
-				B6E649D2250E58EC000F455E /* Release */,
+				B6E64A0D250F32BE000F455E /* Debug */,
+				B6E64A0E250F32BE000F455E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6E649D3250E58EC000F455E /* Build configuration list for PBXNativeTarget "MUSICTests" */ = {
+		B6E64A0F250F32BE000F455E /* Build configuration list for PBXNativeTarget "VeiwPracticeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6E649D4250E58EC000F455E /* Debug */,
-				B6E649D5250E58EC000F455E /* Release */,
+				B6E64A10250F32BE000F455E /* Debug */,
+				B6E64A11250F32BE000F455E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6E649D6250E58EC000F455E /* Build configuration list for PBXNativeTarget "MUSICUITests" */ = {
+		B6E64A12250F32BE000F455E /* Build configuration list for PBXNativeTarget "VeiwPracticeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6E649D7250E58EC000F455E /* Debug */,
-				B6E649D8250E58EC000F455E /* Release */,
+				B6E64A13250F32BE000F455E /* Debug */,
+				B6E64A14250F32BE000F455E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B6E6499E250E58EA000F455E /* Project object */;
+	rootObject = B6E649DA250F32BB000F455E /* Project object */;
 }
