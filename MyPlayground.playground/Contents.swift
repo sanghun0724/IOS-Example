@@ -53,8 +53,19 @@ enum school {
     case university
     case graduate
 }
-
-
+enum number:Int { case zero,one,two,ten }
+print("\(number.ten.rawValue)")
+//연관값
+enum MainDish {
+    case pasta(taste: String)
+    case pizza(taste: String , topping:String)
+    case chicken(menu: String)
+}
+var dinner:MainDish = MainDish.chicken(menu: "양념")
+print(dinner)
+dinner = .pasta(taste: "크림")
+dinner = .pizza(taste: "dd", topping: "dd")
+//P108
  
 
 

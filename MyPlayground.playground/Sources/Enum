@@ -12,5 +12,10 @@ enum school {
     case university
     case graduate
 }
+//원시값 ! rawValue
+let test:school = school.elementary
+print("저의 최종학력은 \(test.rawValue)입니다")
+
+
 
 
