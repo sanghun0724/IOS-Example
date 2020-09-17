@@ -10,12 +10,21 @@ import UIKit
 
 class secondViewController: UIViewController {
    
+    @IBOutlet weak var nameLebel:UILabel!
+    @IBOutlet weak var ageLaber:UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         // Do any additional setup after loading the view.
+    }
+     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.nameLebel.text = UserInformation.shared.name
+        self.ageLaber.text = UserInformation.shared.age
+        
     }
     @IBAction func popToPrev() {
         self.navigationController?.popViewController(animated: true)

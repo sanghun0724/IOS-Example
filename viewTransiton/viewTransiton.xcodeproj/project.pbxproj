@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B66BE4DA2513989E00E70A86 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66BE4D92513989E00E70A86 /* UserInformation.swift */; };
 		B6F9C36125108DF20007C55E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9C36025108DF20007C55E /* AppDelegate.swift */; };
 		B6F9C36325108DF20007C55E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9C36225108DF20007C55E /* SceneDelegate.swift */; };
 		B6F9C36525108DF20007C55E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9C36425108DF20007C55E /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B66BE4D92513989E00E70A86 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		B6F9C35D25108DF20007C55E /* viewTransiton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viewTransiton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F9C36025108DF20007C55E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F9C36225108DF20007C55E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				B6F9C36225108DF20007C55E /* SceneDelegate.swift */,
 				B6F9C36425108DF20007C55E /* ViewController.swift */,
 				B6F9C36625108DF20007C55E /* Main.storyboard */,
+				B66BE4D92513989E00E70A86 /* UserInformation.swift */,
 				B6F9C3902510936D0007C55E /* secondViewController.swift */,
 				B6F9C36925108DF40007C55E /* Assets.xcassets */,
 				B6F9C36B25108DF40007C55E /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66BE4DA2513989E00E70A86 /* UserInformation.swift in Sources */,
 				B6F9C3912510936D0007C55E /* secondViewController.swift in Sources */,
 				B6F9C36525108DF20007C55E /* ViewController.swift in Sources */,
 				B6F9C36125108DF20007C55E /* AppDelegate.swift in Sources */,
