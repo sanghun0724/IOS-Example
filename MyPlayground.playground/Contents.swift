@@ -66,7 +66,9 @@ print(dinner)
 dinner = .pasta(taste: "크림")
 dinner = .pizza(taste: "dd", topping: "dd")
 //P108
- 
+dinner = .chicken(menu: "bong")
+
+
 
 
 
