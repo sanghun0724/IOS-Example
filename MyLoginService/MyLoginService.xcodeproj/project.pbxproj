@@ -13,6 +13,7 @@
 		B651F18C251856CE00BBEB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651F18A251856CE00BBEB1E /* Main.storyboard */; };
 		B651F18E251856D000BBEB1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B651F18D251856D000BBEB1E /* Assets.xcassets */; };
 		B651F191251856D000BBEB1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651F18F251856D000BBEB1E /* LaunchScreen.storyboard */; };
+		B651F19F251868D300BBEB1E /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651F19E251868D300BBEB1E /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B651F18D251856D000BBEB1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B651F190251856D000BBEB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B651F192251856D000BBEB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B651F19E251868D300BBEB1E /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B651F184251856CE00BBEB1E /* AppDelegate.swift */,
 				B651F186251856CE00BBEB1E /* SceneDelegate.swift */,
 				B651F188251856CE00BBEB1E /* ViewController.swift */,
+				B651F19E251868D300BBEB1E /* SecondView.swift */,
 				B651F18A251856CE00BBEB1E /* Main.storyboard */,
 				B651F18D251856D000BBEB1E /* Assets.xcassets */,
 				B651F18F251856D000BBEB1E /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				B651F189251856CE00BBEB1E /* ViewController.swift in Sources */,
 				B651F185251856CE00BBEB1E /* AppDelegate.swift in Sources */,
+				B651F19F251868D300BBEB1E /* SecondView.swift in Sources */,
 				B651F187251856CE00BBEB1E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +288,7 @@
 		B651F196251856D000BBEB1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L2K3UD2LK;
@@ -303,7 +307,7 @@
 		B651F197251856D000BBEB1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L2K3UD2LK;
