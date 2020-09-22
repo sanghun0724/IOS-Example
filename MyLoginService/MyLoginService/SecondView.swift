@@ -9,24 +9,15 @@ import UIKit
 
 class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigationControllerDelegate ,UIGestureRecognizerDelegate{
     
-        
-    
-   
-    
-    let alert = UIAlertController(title: "Sorry", message: "please do it again", preferredStyle: .alert)
-    let defaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
-    }
-    
-    
-    
-    
     
     @IBOutlet weak var ID:UITextField!
     @IBOutlet weak var password:UITextField!
     @IBOutlet weak var password2:UITextField!
     @IBOutlet weak var bigText:UITextView!
     
-   
+    let alert = UIAlertController(title: "Sorry", message: "please do it again", preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
+    }
     
     
     func check (_ t1:UITextField,_ t2:UITextField,_ ID:UITextField,_ big:UITextView)->Bool{
@@ -66,17 +57,6 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     }
     
     
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
     lazy var imagePicker: UIImagePickerController =  {
         let picker:UIImagePickerController = UIImagePickerController()
         picker.sourceType = .photoLibrary
@@ -109,9 +89,6 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
     
     
     

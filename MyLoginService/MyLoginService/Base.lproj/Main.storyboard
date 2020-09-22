@@ -96,16 +96,25 @@
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-qu-qqi">
                                 <rect key="frame" x="200" y="30" width="184" height="34"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-xS-cHn">
                                 <rect key="frame" x="200" y="80" width="184" height="34"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KP5-kz-Yzh">
                                 <rect key="frame" x="200" y="130" width="184" height="34"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -183,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="2397.1014492753625" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Thirh View-->
         <scene sceneID="7ri-SO-4a9">
             <objects>
-                <viewController storyboardIdentifier="thirdVc" id="jfj-rc-210" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="thirdVc" id="jfj-rc-210" customClass="ThirhView" customModule="MyLoginService" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jMd-6V-p0V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,22 +211,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1ZV-uX-mvr">
-                                <rect key="frame" x="0.0" y="189" width="414" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="Lur-Qg-efT"/>
-                                    <constraint firstAttribute="height" constant="216" id="eJK-TL-5R1"/>
-                                </constraints>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkA-uB-vdQ">
-                                <rect key="frame" x="60" y="435" width="35" height="36"/>
+                                <rect key="frame" x="60" y="419" width="35" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="취소">
                                     <color key="titleColor" systemColor="systemPinkColor"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-mZ-Eg4">
-                                <rect key="frame" x="189.5" y="435" width="35" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-mZ-Eg4">
+                                <rect key="frame" x="182.5" y="419" width="35" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="이전"/>
                             </button>
@@ -234,36 +236,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-SF-AmH">
-                                <rect key="frame" x="319" y="435" width="35" height="36"/>
+                                <rect key="frame" x="319" y="419" width="35" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="가입"/>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="v0M-rG-AvX">
+                                <rect key="frame" x="0.0" y="217" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="0b0-GR-Z90"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="Ctw-kS-mwK"/>
+                                </constraints>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ype-xS-qlk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="v0M-rG-AvX" firstAttribute="centerX" secondItem="jMd-6V-p0V" secondAttribute="centerX" id="1RA-yH-pkC"/>
                             <constraint firstItem="oMc-yg-dOi" firstAttribute="top" secondItem="Ype-xS-qlk" secondAttribute="top" constant="10" id="3Bt-H0-AKv"/>
                             <constraint firstItem="Jes-Mt-sv9" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="20" id="5ZZ-F3-jJM"/>
-                            <constraint firstItem="PzO-SF-AmH" firstAttribute="top" secondItem="1ZV-uX-mvr" secondAttribute="bottom" constant="30" id="Avl-zB-FbL"/>
+                            <constraint firstItem="v0M-rG-AvX" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" id="9K1-Pw-bdK"/>
                             <constraint firstItem="CFt-v4-84i" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="20" id="CY3-fU-IeG"/>
                             <constraint firstItem="Jes-Mt-sv9" firstAttribute="top" secondItem="oMc-yg-dOi" secondAttribute="bottom" constant="10" id="EMA-SC-JY4"/>
-                            <constraint firstItem="1ZV-uX-mvr" firstAttribute="top" secondItem="CFt-v4-84i" secondAttribute="bottom" constant="20" id="Gyl-LA-cBe"/>
                             <constraint firstItem="b1Y-XY-ENz" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="228" id="Lb8-0B-6eq"/>
                             <constraint firstItem="pi1-mZ-Eg4" firstAttribute="leading" secondItem="hkA-uB-vdQ" secondAttribute="trailing" priority="33" constant="60" id="LpK-zG-Tuc"/>
-                            <constraint firstItem="hkA-uB-vdQ" firstAttribute="top" secondItem="1ZV-uX-mvr" secondAttribute="bottom" constant="30" id="MMN-iQ-wMI"/>
-                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="top" secondItem="1ZV-uX-mvr" secondAttribute="bottom" constant="30" id="Oja-CR-1Eb"/>
+                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="baseline" secondItem="PzO-SF-AmH" secondAttribute="baseline" id="Rlw-DM-fhe"/>
                             <constraint firstItem="hkA-uB-vdQ" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="60" id="Rnb-Ud-ehq"/>
-                            <constraint firstItem="1ZV-uX-mvr" firstAttribute="centerX" secondItem="pi1-mZ-Eg4" secondAttribute="centerX" id="Rzn-kv-zU2"/>
+                            <constraint firstItem="v0M-rG-AvX" firstAttribute="top" secondItem="CFt-v4-84i" secondAttribute="bottom" constant="48" id="aXu-vY-LtW"/>
                             <constraint firstItem="Ype-xS-qlk" firstAttribute="trailing" secondItem="PzO-SF-AmH" secondAttribute="trailing" constant="60" id="al5-SK-wqi"/>
-                            <constraint firstItem="1ZV-uX-mvr" firstAttribute="top" secondItem="b1Y-XY-ENz" secondAttribute="bottom" constant="20" id="cfD-aG-Qk4"/>
+                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="baseline" secondItem="hkA-uB-vdQ" secondAttribute="baseline" id="bGx-Aq-F6o"/>
                             <constraint firstItem="CFt-v4-84i" firstAttribute="top" secondItem="Jes-Mt-sv9" secondAttribute="bottom" constant="30" id="fDW-nE-8vs"/>
-                            <constraint firstItem="1ZV-uX-mvr" firstAttribute="leading" secondItem="jMd-6V-p0V" secondAttribute="leading" id="fv9-6D-47O"/>
+                            <constraint firstItem="hkA-uB-vdQ" firstAttribute="top" secondItem="v0M-rG-AvX" secondAttribute="bottom" constant="40" id="fdQ-1c-Oup"/>
                             <constraint firstItem="PzO-SF-AmH" firstAttribute="leading" secondItem="pi1-mZ-Eg4" secondAttribute="trailing" priority="33" constant="60" id="ipj-Sd-eZx"/>
                             <constraint firstItem="Ype-xS-qlk" firstAttribute="trailing" secondItem="b1Y-XY-ENz" secondAttribute="trailing" constant="20" id="jJI-FM-T7Y"/>
                             <constraint firstItem="Ype-xS-qlk" firstAttribute="trailing" secondItem="Jes-Mt-sv9" secondAttribute="trailing" constant="200" id="lPm-Cq-29m"/>
                             <constraint firstItem="oMc-yg-dOi" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="20" id="mxB-Xu-wH7"/>
                             <constraint firstItem="CFt-v4-84i" firstAttribute="top" secondItem="Jes-Mt-sv9" secondAttribute="bottom" constant="30" id="o68-QP-fkM"/>
                             <constraint firstItem="Ype-xS-qlk" firstAttribute="trailing" secondItem="CFt-v4-84i" secondAttribute="trailing" constant="80" id="rwf-4q-7jM"/>
+                            <constraint firstItem="b1Y-XY-ENz" firstAttribute="baseline" secondItem="CFt-v4-84i" secondAttribute="baseline" id="xX0-yc-RU5"/>
                         </constraints>
                     </view>
                 </viewController>

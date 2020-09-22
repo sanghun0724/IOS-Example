@@ -9,6 +9,12 @@ import UIKit
 
 class ThirhView: UIViewController {
     
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
