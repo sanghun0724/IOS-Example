@@ -70,6 +70,13 @@ dinner = .chicken(menu: "bong")
 dinner = .chicken(menu: "song")
 
 
+var optionalA: Int? = nil
+var optionalB: Int! = nil
+
+//optionalA = optionalB + 1
+optionalA = 100
+//print(optionalB * 3)
+optionalB = optionalA
 
 
 

@@ -12,6 +12,9 @@ class ViewController: UIViewController , UIGestureRecognizerDelegate{
     @IBAction func tapView(_ sender:UITapGestureRecognizer){
         self.view.endEditing(true)
     }
+    @IBAction func ttttt(_sender:UITapGestureRecognizer){
+        print("gkgk")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
