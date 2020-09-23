@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -86,7 +87,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e3e-bA-e3D">
                                 <rect key="frame" x="20" y="18" width="160" height="202.5"/>
-                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="dxy-tO-c51"/>
@@ -135,8 +136,8 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RsF-BK-fY5">
                                 <rect key="frame" x="20" y="240" width="374" height="522"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -212,16 +213,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkA-uB-vdQ">
-                                <rect key="frame" x="60" y="419" width="35" height="36"/>
+                                <rect key="frame" x="60" y="419" width="36.5" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="취소">
                                     <color key="titleColor" systemColor="systemPinkColor"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-mZ-Eg4">
-                                <rect key="frame" x="182.5" y="419" width="35" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <state key="normal" title="이전"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFt-v4-84i">
                                 <rect key="frame" x="20" y="148.5" width="314" height="20.5"/>
@@ -236,7 +232,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-SF-AmH">
-                                <rect key="frame" x="319" y="419" width="35" height="36"/>
+                                <rect key="frame" x="318.5" y="419" width="35.5" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="가입"/>
                             </button>
@@ -247,6 +243,14 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="Ctw-kS-mwK"/>
                                 </constraints>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-mZ-Eg4">
+                                <rect key="frame" x="189.5" y="419" width="35" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="wJb-ac-F2J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="이전"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ype-xS-qlk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -258,15 +262,16 @@
                             <constraint firstItem="CFt-v4-84i" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="20" id="CY3-fU-IeG"/>
                             <constraint firstItem="Jes-Mt-sv9" firstAttribute="top" secondItem="oMc-yg-dOi" secondAttribute="bottom" constant="10" id="EMA-SC-JY4"/>
                             <constraint firstItem="b1Y-XY-ENz" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="228" id="Lb8-0B-6eq"/>
-                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="leading" secondItem="hkA-uB-vdQ" secondAttribute="trailing" priority="33" constant="60" id="LpK-zG-Tuc"/>
-                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="baseline" secondItem="PzO-SF-AmH" secondAttribute="baseline" id="Rlw-DM-fhe"/>
+                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="leading" secondItem="hkA-uB-vdQ" secondAttribute="trailing" constant="93" id="Mad-qw-93g"/>
+                            <constraint firstItem="PzO-SF-AmH" firstAttribute="leading" secondItem="pi1-mZ-Eg4" secondAttribute="trailing" constant="94" id="QGe-ny-M3V"/>
                             <constraint firstItem="hkA-uB-vdQ" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="60" id="Rnb-Ud-ehq"/>
+                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="top" secondItem="v0M-rG-AvX" secondAttribute="bottom" constant="40" id="Ujr-s5-Krt"/>
+                            <constraint firstItem="PzO-SF-AmH" firstAttribute="top" secondItem="v0M-rG-AvX" secondAttribute="bottom" constant="40" id="WcB-vV-eZg"/>
                             <constraint firstItem="v0M-rG-AvX" firstAttribute="top" secondItem="CFt-v4-84i" secondAttribute="bottom" constant="48" id="aXu-vY-LtW"/>
                             <constraint firstItem="Ype-xS-qlk" firstAttribute="trailing" secondItem="PzO-SF-AmH" secondAttribute="trailing" constant="60" id="al5-SK-wqi"/>
-                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="baseline" secondItem="hkA-uB-vdQ" secondAttribute="baseline" id="bGx-Aq-F6o"/>
+                            <constraint firstItem="pi1-mZ-Eg4" firstAttribute="centerX" secondItem="v0M-rG-AvX" secondAttribute="centerX" id="bZT-mN-gJM"/>
                             <constraint firstItem="CFt-v4-84i" firstAttribute="top" secondItem="Jes-Mt-sv9" secondAttribute="bottom" constant="30" id="fDW-nE-8vs"/>
                             <constraint firstItem="hkA-uB-vdQ" firstAttribute="top" secondItem="v0M-rG-AvX" secondAttribute="bottom" constant="40" id="fdQ-1c-Oup"/>
-                            <constraint firstItem="PzO-SF-AmH" firstAttribute="leading" secondItem="pi1-mZ-Eg4" secondAttribute="trailing" priority="33" constant="60" id="ipj-Sd-eZx"/>
                             <constraint firstItem="Ype-xS-qlk" firstAttribute="trailing" secondItem="b1Y-XY-ENz" secondAttribute="trailing" constant="20" id="jJI-FM-T7Y"/>
                             <constraint firstItem="Ype-xS-qlk" firstAttribute="trailing" secondItem="Jes-Mt-sv9" secondAttribute="trailing" constant="200" id="lPm-Cq-29m"/>
                             <constraint firstItem="oMc-yg-dOi" firstAttribute="leading" secondItem="Ype-xS-qlk" secondAttribute="leading" constant="20" id="mxB-Xu-wH7"/>
@@ -290,8 +295,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
