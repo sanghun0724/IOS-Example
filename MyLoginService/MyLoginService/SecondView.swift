@@ -31,9 +31,9 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     
     
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
     
     @IBAction func nextButton(_ sender: UIButton) {
         
@@ -54,9 +54,50 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
                 vcName?.modalTransitionStyle = .coverVertical
                 self.present(vcName!, animated: true, completion: nil)
                           }
-        
+    }
+    
+    
+    @IBAction func cancelButoon(_ sender: UIButton) {
         
     }
+    
+    
+    
+    @IBOutlet var imageView:UIImageView!
+    
+
+//     func ImagePicker()
+//    {
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary)
+//        {
+//            let picker = UIImagePickerController()
+//            picker.sourceType = UIImagePickerController.SourceType.photoLibrary
+//            picker.delegate = self
+//            picker.allowsEditing = true
+//            self.present(picker, animated: true, completion: nil)
+//        }
+//
+//    }
+//
+//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+//        var newImage: UIImage
+//
+//        if let possibleImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+//            newImage = possibleImage
+//        } else if let possibleImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+//            newImage = possibleImage
+//        } else {
+//            return
+//        }
+//
+//        dismiss(animated: true, completion: nil)
+//
+//        currentImage = newImage
+//    }
+//
+    
+    
+    
     
     
     lazy var imagePicker: UIImagePickerController =  {
@@ -65,28 +106,28 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
         picker.delegate = self
         return picker
     }()
-    
-    @IBOutlet weak var imageView:UIImageView!
-    
-    @IBAction func touchUpSelectImageButton (_ sender:UITapGestureRecognizer){
-        self.present(self.imagePicker, animated: true, completion: nil)
-    }
+
+//    @IBOutlet weak var imageView:UIImageView!
+
+//    @IBAction func touchUpSelectImageButton (_ sender:UIImageView){
+//        self.present(self.imagePicker, animated: true, completion: nil)
+//    }
+//
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        if let originalImage:UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+//            self.imageView.image = originalImage
+//
+//        }
+//        self.dismiss(animated: true, completion: nil)
+//    }
+
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let originalImage:UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             self.imageView.image = originalImage
-            
         }
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        if let originalImage:UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-//            self.imageView.image = originalImage
-//        }
-//        self.dismiss(animated: true, completion: nil)
-//    }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
@@ -96,11 +137,23 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            imageView.isUserInteractionEnabled = true
+            imageView.addGestureRecognizer(tapGestureRecognizer)
+        }
+
+        @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+        {
+            _ = tapGestureRecognizer.view as! UIImageView
+            present(self.imagePicker, animated: true, completion: nil)
+            
+           
+        }
+
          
        
             }
-        }
+
         
         
         // Do any additional setup after loading the view.
