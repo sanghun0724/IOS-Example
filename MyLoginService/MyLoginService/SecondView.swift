@@ -48,15 +48,18 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
         }
             else {
                 let vcName =
-                    self.storyboard?.instantiateViewController(identifier: "thirdVc")
-                    
-                vcName?.modalTransitionStyle = .coverVertical
-                self.present(vcName!, animated: true, completion: nil)
+                   self.storyboard?.instantiateViewController(identifier: "thirdVc")
+//
+//                vcName?.modalTransitionStyle = .coverVertical
+//                self.present(vcName!, animated: true, completion: nil)
+                self.navigationController?.pushViewController(vcName!, animated: true)
+                
                           }
     }
     
     
     @IBAction func cancelButoon(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
         
     }
     
