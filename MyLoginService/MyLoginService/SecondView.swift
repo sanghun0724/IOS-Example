@@ -30,10 +30,9 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     }
     
     
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.view.endEditing(true)
-//    }
+   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func nextButton(_ sender: UIButton) {
         
@@ -66,38 +65,7 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     @IBOutlet var imageView:UIImageView!
     
 
-//     func ImagePicker()
-//    {
-//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary)
-//        {
-//            let picker = UIImagePickerController()
-//            picker.sourceType = UIImagePickerController.SourceType.photoLibrary
-//            picker.delegate = self
-//            picker.allowsEditing = true
-//            self.present(picker, animated: true, completion: nil)
-//        }
-//
-//    }
-//
-//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-//        var newImage: UIImage
-//
-//        if let possibleImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
-//            newImage = possibleImage
-//        } else if let possibleImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-//            newImage = possibleImage
-//        } else {
-//            return
-//        }
-//
-//        dismiss(animated: true, completion: nil)
-//
-//        currentImage = newImage
-//    }
-//
-    
-    
-    
+
     
     
     lazy var imagePicker: UIImagePickerController =  {
@@ -107,19 +75,7 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
         return picker
     }()
 
-//    @IBOutlet weak var imageView:UIImageView!
 
-//    @IBAction func touchUpSelectImageButton (_ sender:UIImageView){
-//        self.present(self.imagePicker, animated: true, completion: nil)
-//    }
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        if let originalImage:UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-//            self.imageView.image = originalImage
-//
-//        }
-//        self.dismiss(animated: true, completion: nil)
-//    }
 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
