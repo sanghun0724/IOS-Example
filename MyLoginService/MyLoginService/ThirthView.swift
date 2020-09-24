@@ -11,10 +11,12 @@ class ThirhView: UIViewController {
     
     
     
-    
-    
-    
-    
+    @IBAction func lastCancelButton(_ sender:UIButton){
+        
+    }
+//    @IBAction func 
+//    @IBAction
+//    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

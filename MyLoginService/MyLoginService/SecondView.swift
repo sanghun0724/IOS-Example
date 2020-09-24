@@ -21,7 +21,7 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     
     
     func check (_ t1:UITextField,_ t2:UITextField,_ ID:UITextField,_ big:UITextView)->Bool{
-        if (t1.text?.count) == 0 || ((t2.text?.count) == 0) || ((ID.text?.count) == 0) || (big.text?.count) == 0   {
+        if (t1.text?.count) == 0 || ((t2.text?.count) == 0) || ((ID.text?.count) == 0) || (big.text?.count) == 0 || self.imageView.image == nil || t1.text != t2.text {
             return false
         }
         
@@ -36,7 +36,7 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     
     @IBAction func nextButton(_ sender: UIButton) {
         
-        if self.check(self.ID, self.password, self.password2, self.bigText) == false {
+        if self.check(self.password, self.password2, self.ID, self.bigText) == false {
             let alert = UIAlertController(title: "Sorry", message: "please do it again", preferredStyle: .alert)
             let deFaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
             }
@@ -91,6 +91,9 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
     
     
     
