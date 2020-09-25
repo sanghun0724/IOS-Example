@@ -11,6 +11,18 @@ class ThirhView: UIViewController {
     
     @IBOutlet weak var datePicker:UIDatePicker!
     @IBOutlet weak var dateLabel:UILabel!
+    @IBOutlet weak var phoneNuberText:UITextField!
+    
+    func check2(phoneNumber:UITextField,Label:UILabel) ->Bool {
+        if (phoneNumber.text?.count) == 0 || (Label.text) == nil{
+           return false
+        }
+            return true
+    
+        }
+    let alert = UIAlertController(title: "Sorry", message: "please do it again", preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
+    }
     
     @IBAction func lastCancelButton(_ sender:UIButton){
         self.navigationController?.popToRootViewController(animated: true)
@@ -19,8 +31,21 @@ class ThirhView: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func signUp(_ sender:UIButton){
+        if(check2(phoneNumber: phoneNuberText, Label: dateLabel)) == false {
+            let alert = UIAlertController(title: "Sorry", message: "please do it again", preferredStyle: .alert)
+            let deFaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
+            }
+            alert.addAction(deFaultAction)
+            present(alert, animated: true, completion: nil)
         
-    }
+        }
+            else  {
+                
+                self.navigationController?.popViewController(animated: true)
+                
+            }
+        }
+    
     let dateFormatter:DateFormatter = {
         let formatter:DateFormatter = DateFormatter()
         formatter.dateStyle = .medium

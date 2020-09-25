@@ -9,4 +9,8 @@ import Foundation
 
 class UserInformation {
     
+    static let shared:UserInformation = UserInformation()
+
+    var ID:String?
+    var Password:String?
 }

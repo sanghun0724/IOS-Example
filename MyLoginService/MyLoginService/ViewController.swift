@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var firstId:UITextField!
+    @IBOutlet weka var firstPassword:UITextField!
 
     @IBAction func firstNextButton(_ sender:UIButton) {
         let vc = self.storyboard?.instantiateViewController(identifier: "secondVc")

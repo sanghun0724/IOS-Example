@@ -53,6 +53,8 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
         
         }
             else {
+                UserInformation.shared.ID = self.ID.text
+                UserInformation.shared.Password = self.password.text
                 let vcName =
                    self.storyboard?.instantiateViewController(identifier: "thirdVc")
 //
