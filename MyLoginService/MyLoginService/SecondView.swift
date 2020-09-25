@@ -14,6 +14,12 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     @IBOutlet weak var password:UITextField!
     @IBOutlet weak var password2:UITextField!
     @IBOutlet weak var bigText:UITextView!
+    @IBOutlet var imageView:UIImageView!
+    @IBAction func cancelButoon(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    
+    }
+    
     
     let alert = UIAlertController(title: "Sorry", message: "please do it again", preferredStyle: .alert)
     let defaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
@@ -58,17 +64,7 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     }
     
     
-    @IBAction func cancelButoon(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-        
-    }
-    
-    
-    
-    @IBOutlet var imageView:UIImageView!
-    
-
-
+   
     
     
     lazy var imagePicker: UIImagePickerController =  {

@@ -212,6 +212,9 @@
                                 <state key="normal" title="취소">
                                     <color key="titleColor" systemColor="systemPinkColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="lastCancelButton:" destination="jfj-rc-210" eventType="touchUpInside" id="vEc-OS-jqp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFt-v4-84i">
                                 <rect key="frame" x="20" y="148.5" width="314" height="20.5"/>
@@ -229,6 +232,9 @@
                                 <rect key="frame" x="318.5" y="419" width="35.5" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="가입"/>
+                                <connections>
+                                    <action selector="signUp:" destination="jfj-rc-210" eventType="touchUpInside" id="c9l-DF-mTt"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="v0M-rG-AvX">
                                 <rect key="frame" x="0.0" y="217" width="414" height="162"/>
@@ -236,6 +242,9 @@
                                     <constraint firstAttribute="height" constant="162" id="0b0-GR-Z90"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="Ctw-kS-mwK"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="datePickerValueChage:" destination="jfj-rc-210" eventType="touchUpInside" id="rUo-kj-gkj"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-mZ-Eg4">
                                 <rect key="frame" x="189.5" y="419" width="35" height="36"/>
@@ -244,6 +253,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="이전"/>
+                                <connections>
+                                    <action selector="backButton:" destination="jfj-rc-210" eventType="touchUpInside" id="2IH-yo-Fex"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ype-xS-qlk"/>
@@ -274,6 +286,10 @@
                             <constraint firstItem="b1Y-XY-ENz" firstAttribute="baseline" secondItem="CFt-v4-84i" secondAttribute="baseline" id="xX0-yc-RU5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="b1Y-XY-ENz" id="qOk-tw-p8c"/>
+                        <outlet property="datePicker" destination="v0M-rG-AvX" id="Zlz-e7-lKu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bx-kq-3Zo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
