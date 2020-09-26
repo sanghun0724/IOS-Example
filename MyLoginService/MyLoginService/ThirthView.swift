@@ -20,9 +20,7 @@ class ThirhView: UIViewController {
             return true
     
         }
-    let alert = UIAlertController(title: "Sorry", message: "please do it again", preferredStyle: .alert)
-    let defaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
-    }
+    
     
     @IBAction func lastCancelButton(_ sender:UIButton){
         self.navigationController?.popToRootViewController(animated: true)
@@ -40,6 +38,9 @@ class ThirhView: UIViewController {
         
         }
             else  {
+                var ar:ViewController = ViewController()
+                ar.firstId.text = UserInformation.shared.ID
+                ar.firstPassword.text = UserInformation.shared.Password
                 
                 self.navigationController?.popViewController(animated: true)
                 

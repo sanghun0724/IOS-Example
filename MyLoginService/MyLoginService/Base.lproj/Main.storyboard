@@ -71,6 +71,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L6A-yV-YXF"/>
+                    <connections>
+                        <outlet property="firstId" destination="T87-ev-s8D" id="euD-ZJ-cK6"/>
+                        <outlet property="firstPassword" destination="nbq-dH-T6b" id="oqa-sh-6nT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,6 +293,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="b1Y-XY-ENz" id="qOk-tw-p8c"/>
                         <outlet property="datePicker" destination="v0M-rG-AvX" id="Zlz-e7-lKu"/>
+                        <outlet property="phoneNuberText" destination="Jes-Mt-sv9" id="yYD-IU-sc3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bx-kq-3Zo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,6 +11,6 @@ class UserInformation {
     
     static let shared:UserInformation = UserInformation()
 
-    var ID:String?
-    var Password:String?
+    var ID:String? = "crap"
+    var Password:String? = "crap"
 }

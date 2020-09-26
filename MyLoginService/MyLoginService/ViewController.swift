@@ -10,7 +10,11 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var firstId:UITextField!
-    @IBOutlet weka var firstPassword:UITextField!
+        
+    
+    
+    @IBOutlet weak var firstPassword:UITextField!
+    
 
     @IBAction func firstNextButton(_ sender:UIButton) {
         let vc = self.storyboard?.instantiateViewController(identifier: "secondVc")
@@ -21,6 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
     
