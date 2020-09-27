@@ -17,7 +17,7 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
     @IBOutlet var imageView:UIImageView!
     @IBAction func cancelButoon(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-    
+    //ddddddddddddd
     }
     
     
@@ -50,7 +50,6 @@ class SecondView: UIViewController,UIImagePickerControllerDelegate ,UINavigation
             
             
             present(alert, animated: true, completion: nil)
-        
         }
             else {
                 UserInformation.shared.ID = self.ID.text

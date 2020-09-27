@@ -10,8 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var firstId:UITextField!
-        
-    
     
     @IBOutlet weak var firstPassword:UITextField!
     
