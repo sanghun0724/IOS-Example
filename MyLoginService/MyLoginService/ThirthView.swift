@@ -39,11 +39,13 @@ class ThirhView: UIViewController {
         }
             else  {
                 var ar:ViewController = ViewController()
-                ar.firstId.text = UserInformation.shared.ID
+                if UserInformation.shared.ID != nil && UserInformation.shared.Password != nil{
+                ar.firstId.text = UserInformation.shared.ID //옵서녈 안전하게 꺼내기 ㄱ
                 ar.firstPassword.text = UserInformation.shared.Password
                 
                 self.navigationController?.popViewController(animated: true)
-                
+                }
+                print("something wrong")
             }
         }
     

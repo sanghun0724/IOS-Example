@@ -247,7 +247,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="Ctw-kS-mwK"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="datePickerValueChage:" destination="jfj-rc-210" eventType="touchUpInside" id="rUo-kj-gkj"/>
+                                    <action selector="datePickerValueChage:" destination="jfj-rc-210" eventType="valueChanged" id="VXN-2W-nrF"/>
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-mZ-Eg4">
