@@ -12,7 +12,7 @@ class ThirhView: UIViewController {
     @IBOutlet weak var datePicker:UIDatePicker!
     @IBOutlet weak var dateLabel:UILabel!
     @IBOutlet weak var phoneNuberText:UITextField!
-    
+   
     func check2(phoneNumber:UITextField,Label:UILabel) ->Bool {
         if (phoneNumber.text?.count) == 0 || (Label.text) == nil{
            return false
@@ -38,18 +38,13 @@ class ThirhView: UIViewController {
         
         }
             else  {
-                let ar:ViewController = ViewController()
-                if ar.firstId.text != nil && ar.firstPassword.text != nil{
-                    ar.firstId.text? = UserInformation.shared.ID!
-                    ar.firstPassword.text? = UserInformation.shared.Password!
-                //옵서녈 안전하게 꺼내기 ㄱ
-                    
+                 
                 
-                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.popToRootViewController(animated: true)
                 }
                 print("something wrong")
             }
-        }
+        
     
     let dateFormatter:DateFormatter = {
         let formatter:DateFormatter = DateFormatter()
@@ -71,3 +66,4 @@ class ThirhView: UIViewController {
         super.viewDidLoad()
     }
 }
+

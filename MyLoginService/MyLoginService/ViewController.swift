@@ -9,9 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var firstId:UITextField!
-    
-    @IBOutlet weak var firstPassword:UITextField!
+    @IBOutlet weak var firstId:UITextField?
+    @IBOutlet weak var firstPassword:UITextField?
     
 
     @IBAction func firstNextButton(_ sender:UIButton) {
@@ -21,6 +20,10 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.firstId?.text = UserInformation.shared.ID
+        self.firstPassword?.text = UserInformation.shared.Password
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
