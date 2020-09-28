@@ -8,11 +8,13 @@
 import UIKit
 
 class ThirhView: UIViewController {
-    
+    //MARK: Outlet
     @IBOutlet weak var datePicker:UIDatePicker!
     @IBOutlet weak var dateLabel:UILabel!
     @IBOutlet weak var phoneNuberText:UITextField!
+    var ar:ViewController = ViewController()
    
+    //MARK: Method
     func check2(phoneNumber:UITextField,Label:UILabel) ->Bool {
         if (phoneNumber.text?.count) == 0 || (Label.text) == nil{
            return false
@@ -21,8 +23,12 @@ class ThirhView: UIViewController {
     
         }
     
-    
+    //MARK: Action Button
     @IBAction func lastCancelButton(_ sender:UIButton){
+        UserInformation.shared.ID = nil
+        UserInformation.shared.Password = nil
+        
+        
         self.navigationController?.popToRootViewController(animated: true)
     }
     @IBAction func backButton(_ sender:UIButton){
@@ -38,24 +44,25 @@ class ThirhView: UIViewController {
         
         }
             else  {
-                 
+               
                 
                 self.navigationController?.popToRootViewController(animated: true)
                 }
                 print("something wrong")
             }
         
+    //MARK: DatePicker
     
     let dateFormatter:DateFormatter = {
         let formatter:DateFormatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
-        return formatter
-    }()
+        
+
+        return formatter}()
     @IBAction func datePickerValueChage(_ sender:UIDatePicker){
         let date:Date = self.datePicker.date
         let dateString:String = self.dateFormatter.string(from: date)
-        
+        self.datePicker.datePickerMode = .date
         self.dateLabel.text  = dateString
     }
     
@@ -64,6 +71,8 @@ class ThirhView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        datePicker.preferredDatePickerStyle = .automatic
     }
 }
 

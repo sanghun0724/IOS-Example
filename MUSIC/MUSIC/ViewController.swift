@@ -12,8 +12,7 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
 
-    var optionalA: Int? = nil
-    var optionalB: Int! = nil
+    
     
   
     // MARK:- Properties
