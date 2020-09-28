@@ -13,6 +13,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet weak var tableView:UITableView!
     let celldentifier: String = "cell"
+    let customCellIdentifier: String = "customcell"
     
     let Korean:[String] = ["가","나","다","라","마","바","사","아","자","차","카","파","타","하"]
     let English:[String] = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z"]
@@ -36,17 +37,24 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell =
-            tableView.dequeueReusableCell(withIdentifier: self.celldentifier, for: indexPath)
+       
         if indexPath.section < 2{
+            let cell:UITableViewCell =
+                tableView.dequeueReusableCell(withIdentifier: self.celldentifier, for: indexPath)
+            
         let text:String = indexPath.section == 0 ? Korean[indexPath.row] : English[indexPath.row]
         cell.textLabel?.text = text
+            return cell
         }
         else {
-            cell.textLabel?.text = self.dateFormetter.string(from: self.dates[indexPath.row])
+            let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.customCellIdentifier, for: indexPath) as! CustomTableViewCell
+            
+            cell.leftLabel.text = self.dateFormetter.string(from: self.dates[indexPath.row])
+            cell.rightLabel.text = self.timeFormetter.string(from: self.dates[indexPath.row])
+            return cell
         }
         
-        return cell
+       
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section < 2 {
@@ -55,13 +63,21 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return nil
     }
     var dates:[Date] = []
-    
+    //왼쪽
     let dateFormetter:DateFormatter = {
         let formatter:DateFormatter = DateFormatter()
         formatter.dateStyle = .medium
+        
+        return formatter
+    }()
+    //오른쪽
+    let timeFormetter:DateFormatter = {
+        let formatter:DateFormatter = DateFormatter()
+        
         formatter.timeStyle = .medium
         return formatter
     }()
+    
     
     @IBAction func touchUpAddButton(_ sender : UIButton){
         dates.append(Date())

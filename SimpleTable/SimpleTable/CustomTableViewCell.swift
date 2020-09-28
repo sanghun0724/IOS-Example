@@ -9,8 +9,9 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    @IBOutlet var 
-    
+    @IBOutlet var leftLabel:UILabel!
+    @IBOutlet var rightLabel:UILabel!
+   
     
     
     
