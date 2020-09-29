@@ -13,6 +13,7 @@
 		B694EB862523494C001ABBB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B694EB842523494C001ABBB4 /* Main.storyboard */; };
 		B694EB8825234951001ABBB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B694EB8725234951001ABBB4 /* Assets.xcassets */; };
 		B694EB8B25234951001ABBB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B694EB8925234951001ABBB4 /* LaunchScreen.storyboard */; };
+		B694EB9425234A32001ABBB4 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694EB9325234A32001ABBB4 /* Friends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B694EB8725234951001ABBB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B694EB8A25234951001ABBB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B694EB8C25234951001ABBB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B694EB9325234A32001ABBB4 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B694EB822523494C001ABBB4 /* ViewController.swift */,
 				B694EB842523494C001ABBB4 /* Main.storyboard */,
 				B694EB8725234951001ABBB4 /* Assets.xcassets */,
+				B694EB9325234A32001ABBB4 /* Friends.swift */,
 				B694EB8925234951001ABBB4 /* LaunchScreen.storyboard */,
 				B694EB8C25234951001ABBB4 /* Info.plist */,
 			);
@@ -140,6 +143,7 @@
 				B694EB832523494C001ABBB4 /* ViewController.swift in Sources */,
 				B694EB7F2523494C001ABBB4 /* AppDelegate.swift in Sources */,
 				B694EB812523494C001ABBB4 /* SceneDelegate.swift in Sources */,
+				B694EB9425234A32001ABBB4 /* Friends.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
