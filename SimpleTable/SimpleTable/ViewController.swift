@@ -92,8 +92,27 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Do any additional setup after loading the view.
         self.tableView.delegate = self
         self.tableView.dataSource = self  // 스토리보드에서 위에 프로토콜 채택한것들 ViewController에 연결한거를 코드로 나타낸것
+        
+    
+        
     }
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation          //sender 은 네비게이션의 흐름을 만들게 된녀석 여기서는 TableView위의 셀
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        guard let nextViewController: SecondViewController =
+                segue.destination as? SecondViewController else {
+            return
+        }
+        
+        guard let cell:UITableViewCell = sender as? UITableViewCell else {
+            return
+        }
+        
+        nextViewController.textToSet = cell.textLabel?.text  
+    }
 
 }
 
