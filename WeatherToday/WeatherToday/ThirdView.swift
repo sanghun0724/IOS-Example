@@ -5,4 +5,7 @@
 //  Created by sangheon on 2020/09/30.
 //
 
-import Foundation
+import UIKit
+class ThirdView:UIViewController {
+    
+}

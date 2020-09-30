@@ -15,6 +15,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     let celldentifier: String = "cell"
     let customCellIdentifier: String = "customcell"
     
+    
     let Korean:[String] = ["가","나","다","라","마","바","사","아","자","차","카","파","타","하"]
     let English:[String] = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z"]
     

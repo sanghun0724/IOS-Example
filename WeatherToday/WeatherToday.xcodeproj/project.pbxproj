@@ -15,6 +15,7 @@
 		B622FF8A25237B1700C93D58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B622FF8825237B1700C93D58 /* LaunchScreen.storyboard */; };
 		B622FF932524ACE500C93D58 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FF922524ACE500C93D58 /* SecondView.swift */; };
 		B622FF962524ACF600C93D58 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FF952524ACF600C93D58 /* ThirdView.swift */; };
+		B622FF992524B52800C93D58 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FF982524B52800C93D58 /* WeatherInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B622FF8B25237B1700C93D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B622FF922524ACE500C93D58 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		B622FF952524ACF600C93D58 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		B622FF982524B52800C93D58 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B622FF7D25237B1400C93D58 /* AppDelegate.swift */,
 				B622FF7F25237B1400C93D58 /* SceneDelegate.swift */,
 				B622FF8125237B1400C93D58 /* ViewController.swift */,
+				B622FF982524B52800C93D58 /* WeatherInformation.swift */,
 				B622FF8325237B1400C93D58 /* Main.storyboard */,
 				B622FF922524ACE500C93D58 /* SecondView.swift */,
 				B622FF952524ACF600C93D58 /* ThirdView.swift */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B622FF8225237B1400C93D58 /* ViewController.swift in Sources */,
+				B622FF992524B52800C93D58 /* WeatherInformation.swift in Sources */,
 				B622FF962524ACF600C93D58 /* ThirdView.swift in Sources */,
 				B622FF7E25237B1400C93D58 /* AppDelegate.swift in Sources */,
 				B622FF932524ACE500C93D58 /* SecondView.swift in Sources */,
