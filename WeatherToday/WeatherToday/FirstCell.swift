@@ -10,7 +10,7 @@ import UIKit
 class FirstCell:UITableViewCell {
     
     @IBOutlet var countryImage:UIImageView!
-    @IBOutlet var countryLabel:UILabel!
+    @IBOutlet var Label:UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

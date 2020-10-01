@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E4w-UG-As6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,32 +22,32 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="firstcell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstcell" id="7xp-a4-sHz" customClass="FirstCell" customModule="WeatherToday" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="33"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="101.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7xp-a4-sHz" id="BRG-CQ-fTV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7xp-a4-sHz" id="BRG-CQ-fTV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="101.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kf-Qv-N7v">
-                                                    <rect key="frame" x="132" y="6" width="42" height="21"/>
+                                                    <rect key="frame" x="110" y="40" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XlL-SN-vdj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="44"/>
+                                                    <rect key="frame" x="0.0" y="10" width="80" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0kf-Qv-N7v" firstAttribute="top" secondItem="BRG-CQ-fTV" secondAttribute="top" constant="6" id="JsD-EE-BbS"/>
+                                                <constraint firstItem="0kf-Qv-N7v" firstAttribute="top" secondItem="BRG-CQ-fTV" secondAttribute="top" constant="40" id="JsD-EE-BbS"/>
                                                 <constraint firstItem="0kf-Qv-N7v" firstAttribute="leading" secondItem="XlL-SN-vdj" secondAttribute="trailing" constant="30" id="p1r-8E-aXt"/>
-                                                <constraint firstAttribute="bottom" secondItem="0kf-Qv-N7v" secondAttribute="bottom" constant="6" id="tmj-5j-NRv"/>
+                                                <constraint firstAttribute="bottom" secondItem="0kf-Qv-N7v" secondAttribute="bottom" constant="40" id="tmj-5j-NRv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageView" destination="XlL-SN-vdj" id="hBM-p0-0Kf"/>
-                                            <outlet property="label" destination="0kf-Qv-N7v" id="APO-KG-ece"/>
+                                            <outlet property="Label" destination="0kf-Qv-N7v" id="2mE-am-Neq"/>
+                                            <outlet property="countryImage" destination="XlL-SN-vdj" id="BIQ-vb-xRD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -66,6 +67,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y9t-rH-WSg"/>
+                    <connections>
+                        <outlet property="tableView" destination="SRm-dI-jyC" id="BGi-ie-W1p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

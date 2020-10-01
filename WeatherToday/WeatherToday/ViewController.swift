@@ -9,37 +9,27 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    let flagImageElement = ["flag_kr","flag_de","flag_it","flag_us","flag_fr","flag_jp"]
     @IBOutlet weak var tableView:UITableView!
     var weather:[WeatherInformation] = []
     var firstCellIdentifier:String = "firstcell"
     
     
     
-    func getImage(from string:String) -> UIImage? {
-//출처https://stackoverflow.com/questions/54955132/how-to-get-image-from-json-in-swift
-        guard let url = URL(string:string) else {
-            print("imageURL에 뭔가 잘못됌")
-            return nil
-        }
-    
-    var image:UIImage? = nil
-    do{
-    let data = try Data(contentsOf: url,options: [])
-    }catch {
-    print(error.localizedDescription)
-    }
-        return image
-    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.weather.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.firstCellIdentifier, for: indexPath)
+        let cell:FirstCell = tableView.dequeueReusableCell(withIdentifier: self.firstCellIdentifier, for: indexPath) as! FirstCell
         
         let weather:WeatherInformation = self.weather[indexPath.row]
         
-        cell.textLabel?.text = weather.name
+        cell.Label?.text = weather.korean_name
+        cell.countryImage.image = UIImage(named: flagImageElement[indexPath.row])
+        
+        return cell
     }
     
     

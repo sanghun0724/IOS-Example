@@ -9,13 +9,12 @@ import Foundation
 
 struct  WeatherInformation:Codable{
     let korean_name:String
-    let assets_name:String
+    let asset_name:String
+    //let images:String
     
-    var name:String {return self.korean_name}
+    
+    
   
-//    enum CodingKeys:String, CodingKey{
-//        case name
-//        case filename
-//    }
+    
 }
 
