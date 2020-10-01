@@ -16,6 +16,7 @@
 		B622FF932524ACE500C93D58 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FF922524ACE500C93D58 /* SecondView.swift */; };
 		B622FF962524ACF600C93D58 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FF952524ACF600C93D58 /* ThirdView.swift */; };
 		B622FF992524B52800C93D58 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FF982524B52800C93D58 /* WeatherInformation.swift */; };
+		B622FF9C2524D71500C93D58 /* FirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FF9B2524D71500C93D58 /* FirstCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B622FF922524ACE500C93D58 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		B622FF952524ACF600C93D58 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		B622FF982524B52800C93D58 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		B622FF9B2524D71500C93D58 /* FirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				B622FF8125237B1400C93D58 /* ViewController.swift */,
 				B622FF982524B52800C93D58 /* WeatherInformation.swift */,
 				B622FF8325237B1400C93D58 /* Main.storyboard */,
+				B622FF9B2524D71500C93D58 /* FirstCell.swift */,
 				B622FF922524ACE500C93D58 /* SecondView.swift */,
 				B622FF952524ACF600C93D58 /* ThirdView.swift */,
 				B622FF8625237B1700C93D58 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				B622FF962524ACF600C93D58 /* ThirdView.swift in Sources */,
 				B622FF7E25237B1400C93D58 /* AppDelegate.swift in Sources */,
 				B622FF932524ACE500C93D58 /* SecondView.swift in Sources */,
+				B622FF9C2524D71500C93D58 /* FirstCell.swift in Sources */,
 				B622FF8025237B1400C93D58 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

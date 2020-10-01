@@ -8,8 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    @IBOutlet weak var tableView:UITableView!
+    var weather:[WeatherInformation] = []
+    var firstCellIdentifier:String = "firstcell"
+    
+    
+    
     func getImage(from string:String) -> UIImage? {
-        //https://stackoverflow.com/questions/54955132/how-to-get-image-from-json-in-swift
+//출처https://stackoverflow.com/questions/54955132/how-to-get-image-from-json-in-swift
         guard let url = URL(string:string) else {
             print("imageURL에 뭔가 잘못됌")
             return nil
@@ -24,11 +31,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return image
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return self.weather.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.firstCellIdentifier, for: indexPath)
+        
+        let weather:WeatherInformation = self.weather[indexPath.row]
+        
+        cell.textLabel?.text = weather.name
     }
     
     
@@ -37,6 +48,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let jsonDecoder:JSONDecoder = JSONDecoder()
+        guard let dataAsset:NSDataAsset = NSDataAsset(name:"countries") else {
+            return
+        }
+        do{
+            self.weather = try jsonDecoder.decode(([WeatherInformation].self), from: dataAsset.data)
+        }catch {
+            print(error.localizedDescription)
+        }
+        self.tableView.reloadData()
     }
 
 
