@@ -20,8 +20,8 @@ struct  WeatherInformation:Codable{
     
     struct countryInfo :Codable {
         let city_name:String
-        let state:Int
-        let celsius:Int
+        let state:Int //이거에 따라 이미지 넣으면댐
+        let celsius:Int //화씨랑 섭씨 계산해야대
         let rainfall_probability:Int
     }
     
