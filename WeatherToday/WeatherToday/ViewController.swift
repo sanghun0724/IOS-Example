@@ -26,7 +26,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         let weather:WeatherInformation = self.weather[indexPath.row]
         
-        cell.Label?.text = weather.korean_name
+        cell.Label?.text = weather.koreanName
         cell.countryImage.image = UIImage(named: flagImageElement[indexPath.row])
         
         return cell
@@ -51,5 +51,27 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
 
-}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextViewController: SecondView =
+                segue.destination as? SecondView else{
+            return
+        }
+        guard let cell:UITableViewCell = sender as? UITableViewCell else {
+            return
+        }
+        if cell.textLabel?.text == "한국"  {
+            nextViewController.cloud = cell.self
+        }
+        
+        
+        }
+   
+   
+         
+    }
+    
+    
+    
+
 

@@ -7,14 +7,43 @@
 
 import UIKit
 class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
-
-
+    var textToSet1:String?
+    var textToSet2:String?
+    var textToSet3:String?
+    var stateValue:Int?
+    let secondCellIDentifier: String = "secondcell"
+    var weather2:[WeatherInformation] = []
+    let snow:String = "snowy"
+    let sun:String = "sunny"
+    let rain:String = "rainy"
+    let cloud:String = "cloudy"
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return self.weather2.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell:SecondCell = tableView.dequeueReusableCell(withIdentifier: self.secondCellIDentifier, for: indexPath) as! SecondCell
+        let weather:WeatherInformation = self.weather2[indexPath.row]
+        
+        cell.label1.text = self.textToSet1
+        cell.label2.text = self.textToSet2
+        cell.label3.text = self.textToSet3
+        let state = self.stateValue
+        switch state {
+        case 10:
+            cell.SecondImage.image = UIImage(named: sun)
+        case 11:
+            cell.SecondImage.image = UIImage(named: cloud)
+        case 12:
+            cell.SecondImage.image = UIImage(named: rain)
+        case 13:
+            cell.SecondImage.image = UIImage(named: snow)
+        default:
+            print("something wrong")
+        }
+        return cell
+        
     }
 
 
