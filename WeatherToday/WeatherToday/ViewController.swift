@@ -60,8 +60,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         guard let cell:UITableViewCell = sender as? UITableViewCell else {
             return
         }
+        let jsonDecoder:JSONDecoder = JSONDecoder()
+       
+        guard let dataAsset:NSDataAsset = NSDataAsset(name:"kr") else {
+            return
+        }
+        do{
+            self.weather = try jsonDecoder.decode(([WeatherInformation].self), from: dataAsset.data)
+        }catch {
+            print(error.localizedDescription)
+        }
         if cell.textLabel?.text == "한국"  {
-            nextViewController.cloud = cell.self
+            print("HIHIHIHIHIHIHI")
+            nextViewController.textToSet1  = WeatherInformation.CodingKeys.cityName.rawValue
+        
         }
         
         

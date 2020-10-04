@@ -14,12 +14,12 @@ import Foundation
 //},
 struct  WeatherInformation: Codable{
     
-    let koreanName:String
-    let assetName:String
-    let cityName:String
-    let state:Int //이거에 따라 이미지 넣으면댐
-    let celsius:Int //화씨랑 섭씨 계산해야대
-    let rainfallProbability:String
+    var koreanName:String?
+    var assetName:String?
+    var cityName:String?
+    var state:Int? //이거에 따라 이미지 넣으면댐
+    var celsius:Int? //화씨랑 섭씨 계산
+    var rainfallProbability:Int?
     
     enum CodingKeys:String,CodingKey {
         case koreanName = "Korean_name"
@@ -30,7 +30,28 @@ struct  WeatherInformation: Codable{
         case rainfallProbability = "rainfall_probability"
         
     }
-
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        if let koreanName = try container.decode(String?.self, forKey: .koreanName){
+            self.koreanName = koreanName
+        }
+        if let assetName = try container.decode(String?.self,forKey: .assetName){
+            self.assetName = assetName
+        }
+        if let cityName = try container.decode(String?.self,forKey: .cityName){
+            self.cityName = cityName
+        }
+        if let state = try container.decode(Int?.self,forKey: .state){
+            self.state = state
+        }
+        if let celsius = try container.decode(Int?.self,forKey: .celsius){
+            self.celsius = celsius
+        }
+        if let rainfallProbability = try container.decode(Int?.self,forKey: .rainfallProbability){
+            self.rainfallProbability = rainfallProbability
+        }
+       
+    }
     
     
     
