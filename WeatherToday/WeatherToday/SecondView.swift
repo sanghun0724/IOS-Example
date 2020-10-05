@@ -17,6 +17,7 @@ class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     let sun:String = "sunny"
     let rain:String = "rainy"
     let cloud:String = "cloudy"
+    @IBOutlet weak var tableView:UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.weather2.count
@@ -24,7 +25,7 @@ class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:SecondCell = tableView.dequeueReusableCell(withIdentifier: self.secondCellIDentifier, for: indexPath) as! SecondCell
-        let weather:WeatherInformation = self.weather2[indexPath.row]
+       
         
         cell.label1.text = self.textToSet1
         cell.label2.text = self.textToSet2
@@ -45,7 +46,9 @@ class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         return cell
         
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+       
+    }
 
 
 }
