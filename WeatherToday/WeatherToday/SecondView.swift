@@ -38,7 +38,7 @@ class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         case 13:
             cell.SecondImage.image = UIImage(named: "snowy")
         default:
-            print("ImageError")
+            print("something wrong")
         }
         return cell
         
@@ -58,9 +58,28 @@ class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         }
         tableView.reloadData()
         
-      
-        
+       
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showmore", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextViewController:ThirdView = segue.destination as? ThirdView
+        else {
+            return
+        }
+        
+        if let indexpath = tableView.indexPathForSelectedRow  {
+            let weather:WeatherInformation = self.weather2[indexpath.row]
+            nextViewController.titleName = weather.cityName
+            nextViewController.setRain = weather.rainfallProbability
+            nextViewController.setState = weather.state
+            nextViewController.setCelsius = weather.celsius
+            
+        }
+      
 
-
+}
+    
 }
