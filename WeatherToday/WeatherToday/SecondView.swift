@@ -7,19 +7,12 @@
 
 import UIKit
 class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
-    var checkValue:String?
-    var countryName:String?{
-        if checkValue == "한국" {
-            return "kr"
-        };   return "kr"
-    }
-    var stateValue:Int?
+    
+    var text1:String?
+    var text2:String?
+    
     let secondCellIDentifier: String = "secondcell"
     var weather2:[WeatherInformation] = []
-    let snow:String = "snowy"
-    let sun:String = "sunny"
-    let rain:String = "rainy"
-    let cloud:String = "cloudy"
     @IBOutlet weak var tableView:UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,33 +22,33 @@ class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:SecondCell = tableView.dequeueReusableCell(withIdentifier: self.secondCellIDentifier, for: indexPath) as! SecondCell
         let weather2:WeatherInformation = self.weather2[indexPath.row]
+        let Answer: Double = floor((weather2.celsius * 1.8 + 32) * 100) / 100
+        cell.label1.text = weather2.cityName
+        cell.label2.text = "섭씨 \(weather2.celsius)도 / 화씨 \(Answer)도"
+        cell.label3.text = "강수확률 \(weather2.rainfallProbability)%"
         
-        cell.label1.text = weather2.city_name
         
-        
-        
-//        let state = self.stateValue
-//        switch state {
-//        case 10:
-//            cell.SecondImage.image = UIImage(named: sun)
-//        case 11:
-//            cell.SecondImage.image = UIImage(named: cloud)
-//        case 12:
-//            cell.SecondImage.image = UIImage(named: rain)
-//        case 13:
-//            cell.SecondImage.image = UIImage(named: snow)
-//        default:
-//            print("something wrong")
-//        }
+    switch weather2.state{
+        case 10:
+            cell.SecondImage.image = UIImage(named: "sunny")
+        case 11:
+            cell.SecondImage.image = UIImage(named: "cloudy")
+        case 12:
+            cell.SecondImage.image = UIImage(named: "rainy")
+        case 13:
+            cell.SecondImage.image = UIImage(named: "snowy")
+        default:
+            print("ImageError")
+        }
         return cell
         
     }
     override func viewDidLoad() {
-        print(checkValue)
-        print(countryName)
+        self.navigationItem.title = text1
+        
         let jsonDecoder:JSONDecoder = JSONDecoder()
         
-        guard let dataAsset:NSDataAsset = NSDataAsset(name: countryName ?? "freak") else {
+        guard let dataAsset:NSDataAsset = NSDataAsset(name: text2!) else {
             return
         }
         do {
@@ -64,6 +57,9 @@ class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
             print(error.localizedDescription)
         }
         tableView.reloadData()
+        
+      
+        
     }
 
 

@@ -18,10 +18,11 @@ class SecondViewController: UIViewController {
      override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.textLabel.text = self.textToSet
-       
+     
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         
         // Do any additional setup after loading the view.
     }

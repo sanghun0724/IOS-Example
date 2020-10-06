@@ -11,22 +11,22 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     let flagImageElement = ["flag_kr","flag_de","flag_it","flag_us","flag_fr","flag_jp"]
     @IBOutlet weak var tableView:UITableView!
-    var weather:[WeatherInformation] = []
+    var myCountry:[MyCountry] = []
     var firstCellIdentifier:String = "firstcell"
-    
+   
     
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.weather.count
+        return self.myCountry.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:FirstCell = tableView.dequeueReusableCell(withIdentifier: self.firstCellIdentifier, for: indexPath) as! FirstCell
         
-        let weather:WeatherInformation = self.weather[indexPath.row]
+        let myCountry:MyCountry = self.myCountry[indexPath.row]
         
-        cell.Label.text = weather.korean_name
+        cell.Label.text = myCountry.koreanName
         cell.countryImage.image = UIImage(named: flagImageElement[indexPath.row])
         
         return cell
@@ -43,30 +43,31 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             return
         }
         do{
-            self.weather = try jsonDecoder.decode(([WeatherInformation].self), from: dataAsset.data)
+            self.myCountry = try jsonDecoder.decode([MyCountry].self, from: dataAsset.data)
         }catch {
             print(error.localizedDescription)
         }
         self.tableView.reloadData()
+        
     }
 
-
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         performSegue(withIdentifier: "show", sender: self)
     }
+    
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextViewController: SecondView =
                 segue.destination as? SecondView else{
             return
         }
-        guard  let cell:FirstCell = sender as? FirstCell else {
-            return
-        }
-        
-        nextViewController.checkValue =
+                   if let indexPath = tableView.indexPathForSelectedRow{
+                       let Mycountry:MyCountry  = self.myCountry[indexPath.row]
+                    nextViewController.text1 = Mycountry.koreanName
+                    nextViewController.text2 = Mycountry.assetName
+                   }
+               
         
         
         }
