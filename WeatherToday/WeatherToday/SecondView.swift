@@ -7,9 +7,12 @@
 
 import UIKit
 class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
-    var textToSet1:String?
-    var textToSet2:String?
-    var textToSet3:String?
+    var checkValue:String?
+    var countryName:String?{
+        if checkValue == "한국" {
+            return "kr"
+        };   return "kr"
+    }
     var stateValue:Int?
     let secondCellIDentifier: String = "secondcell"
     var weather2:[WeatherInformation] = []
@@ -25,29 +28,42 @@ class SecondView: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:SecondCell = tableView.dequeueReusableCell(withIdentifier: self.secondCellIDentifier, for: indexPath) as! SecondCell
-       
+        let weather2:WeatherInformation = self.weather2[indexPath.row]
         
-        cell.label1.text = self.textToSet1
-        cell.label2.text = self.textToSet2
-        cell.label3.text = self.textToSet3
-        let state = self.stateValue
-        switch state {
-        case 10:
-            cell.SecondImage.image = UIImage(named: sun)
-        case 11:
-            cell.SecondImage.image = UIImage(named: cloud)
-        case 12:
-            cell.SecondImage.image = UIImage(named: rain)
-        case 13:
-            cell.SecondImage.image = UIImage(named: snow)
-        default:
-            print("something wrong")
-        }
+        cell.label1.text = weather2.city_name
+        
+        
+        
+//        let state = self.stateValue
+//        switch state {
+//        case 10:
+//            cell.SecondImage.image = UIImage(named: sun)
+//        case 11:
+//            cell.SecondImage.image = UIImage(named: cloud)
+//        case 12:
+//            cell.SecondImage.image = UIImage(named: rain)
+//        case 13:
+//            cell.SecondImage.image = UIImage(named: snow)
+//        default:
+//            print("something wrong")
+//        }
         return cell
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-       
+    override func viewDidLoad() {
+        print(checkValue)
+        print(countryName)
+        let jsonDecoder:JSONDecoder = JSONDecoder()
+        
+        guard let dataAsset:NSDataAsset = NSDataAsset(name: countryName ?? "freak") else {
+            return
+        }
+        do {
+            self.weather2 = try jsonDecoder.decode([WeatherInformation].self,from: dataAsset.data)
+        } catch {
+            print(error.localizedDescription)
+        }
+        tableView.reloadData()
     }
 
 

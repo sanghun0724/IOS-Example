@@ -18,7 +18,7 @@ struct  WeatherInformation: Codable{
     var asset_name:String?
     var city_name:String?
     var state:Int? //이거에 따라 이미지 넣으면댐
-    var celsius:Int? //화씨랑 섭씨 계산
+    var celsius:Double? //화씨랑 섭씨 계산
     var rainfall_probability:Int?
     
 //    enum CodingKeys:String,CodingKey {
@@ -53,7 +53,7 @@ struct  WeatherInformation: Codable{
 //
 //    }
 //
-    
+    // it doesn't work ㅜㅜ
     
     
     

@@ -53,7 +53,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+        
         performSegue(withIdentifier: "show", sender: self)
     }
     
@@ -62,11 +62,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 segue.destination as? SecondView else{
             return
         }
-       
-        let weathers:WeatherInformation = self.weather[(tableView.indexPathForSelectedRow?.row)!]
-        nextViewController.textToSet1 = weatherz
-
-
+        guard  let cell:FirstCell = sender as? FirstCell else {
+            return
+        }
+        
+        nextViewController.checkValue =
+        
+        
         }
 
 
