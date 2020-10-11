@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--사진들-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoExam" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lm7-FU-Djc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="c7F-qm-TrA">
@@ -47,7 +47,17 @@
                             <constraint firstItem="lm7-FU-Djc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jU2-Z4-g5Q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FHY-Lo-Mcm"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="f0p-Jd-3HM"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="사진들" id="bEy-wR-HKp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="9yO-26-RdK">
+                            <connections>
+                                <action selector="touchUpRefreshButton:" destination="BYZ-38-t0r" id="DaZ-60-GQE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="lm7-FU-Djc" id="VV3-9Z-RS5"/>
                     </connections>
@@ -95,7 +105,11 @@
                             <constraint firstItem="reE-13-1Fe" firstAttribute="leading" secondItem="cHM-aa-plT" secondAttribute="leading" id="UJF-03-7rj"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="refresh" id="HES-RL-Yhd"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="xSM-PB-kUR"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="414" height="900"/>
                     <connections>
                         <outlet property="imageView" destination="sD4-gf-yZc" id="sC3-rr-5O7"/>
@@ -108,13 +122,17 @@
         <!--Navigation Controller-->
         <scene sceneID="SAl-JX-y77">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P20-D3-1rO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="P20-D3-1rO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bhy-n8-S3P">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t0x-JW-fvQ">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xhd-Gl-2Be"/>
                     </connections>

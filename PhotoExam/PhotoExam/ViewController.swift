@@ -14,6 +14,9 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     let imageManager: PHCachingImageManager = PHCachingImageManager()
     let cellidentifier: String = "cell"
     
+    @IBAction func touchUpRefreshButton(_ sender:UIBarButtonItem){
+        self.tableView.reloadSections(IndexSet(0...0), with: .automatic)
+    }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
