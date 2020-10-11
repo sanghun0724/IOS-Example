@@ -87,7 +87,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.fetchResult.count ?? 0
+        
+        return self.fetchResult.count ?? 0 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,5 +99,20 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextViewController: ImageZoomViewComtroller = segue.destination as? ImageZoomViewComtroller else {
+            return
+        }
+        guard let cell: UITableViewCell = sender as? UITableViewCell else {
+            return
+        }
+        guard let index:IndexPath = self.tableView.indexPath(for: cell) else {
+            return
+        }
+        nextViewController.asset = self.fetchResult[index.row]
+    }
+    
+    
+    
 }
 
