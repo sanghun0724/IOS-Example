@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     func requestCollection() {
         
-        let cameraRoll: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil)
+        let cameraRoll: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumSyncedEvent, options: nil)
         
         guard let cameraRollCollection = cameraRoll.firstObject else{
             return
