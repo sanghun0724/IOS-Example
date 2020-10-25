@@ -25,7 +25,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var albumNameList:[String] = []
     var albumCountList:[Int] = []
 //    var albumCollectionList:[PHAssetCollection] = []
-    
+    let half: Double = Double(UIScreen.main.bounds.width / 2.0 - 10)
     override func viewWillAppear(_ animated: Bool) {
         print("dasdasdawdsd")
     }
@@ -35,6 +35,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         print("sssssss")
         requestPhotosPermission()
         requestCollection()
+        let flowlayout = UICollectionViewFlowLayout()
+               
+               flowlayout.sectionInset = UIEdgeInsets.zero
+               flowlayout.minimumLineSpacing = 40
+               flowlayout.minimumInteritemSpacing = 20
+               
+               flowlayout.itemSize = CGSize(width: half, height: half + 50)
+               
+               self.collectionView.collectionViewLayout = flowlayout
         collectionView.reloadData()
         
     }
@@ -85,7 +94,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         cell.albumName.text = self.albumNameList[indexPath.item]
         cell.albumCountTitle.text = String(self.albumCountList[indexPath.item])
-        imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: nil, resultHandler:{ assetResult, _ in cell.imageView?.image = assetResult
+        imageManager.requestImage(for: assetResult, targetSize: CGSize(width: half, height: half), contentMode: .aspectFill, options: nil, resultHandler:{ assetResult, _ in cell.imageView?.image = assetResult
 //        OperationQueue().addOperation {
 //            self.imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: nil, resultHandler: {
 //                assetResult, _ in  OperationQueue.main.addOperation {
