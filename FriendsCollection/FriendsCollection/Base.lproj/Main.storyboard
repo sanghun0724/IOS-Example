@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AwS-oX-AuO" customClass="FriendsCollectionViewCell" customModule="FriendsCollection" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="AwS-oX-AuO" customClass="FriendsCollectionViewCell" customModule="FriendsCollection" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="194" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JvO-pV-v2B">
@@ -62,8 +62,8 @@
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <size key="customSize" width="194" height="74"/>
                                         <connections>
+                                            <outlet property="addressLabel" destination="JJJ-wf-EMV" id="lX9-P1-uzQ"/>
                                             <outlet property="nameAgeLabel" destination="21j-6o-9oX" id="5Sa-Es-1MM"/>
-                                            <outlet property="selectedBackgroundView" destination="JJJ-wf-EMV" id="G6R-gT-oEr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -82,6 +82,9 @@
                             <constraint firstItem="bOY-2o-D2h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tnG-Hf-pJ0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="bOY-2o-D2h" id="Hac-My-vvR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

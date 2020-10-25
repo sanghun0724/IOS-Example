@@ -24,22 +24,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     //album
     var albumNameList:[String] = []
     var albumCountList:[Int] = []
-    var albumCollectionList:[PHAssetCollection] = []
+//    var albumCollectionList:[PHAssetCollection] = []
     
-    //class for an album
-    class albumModel{
-    let name:String
-    let count:Int
-    let collection:PHAssetCollection
-    init(name:String,count:Int,collection:PHAssetCollection) {
-        self.name = name
-        self.count = count
-        self.collection = collection
-    }
+    override func viewWillAppear(_ animated: Bool) {
+        print("dasdasdawdsd")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("sssssss")
         requestPhotosPermission()
         requestCollection()
         collectionView.reloadData()
@@ -78,93 +71,72 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return albumNameList.count
+        return fetchResult.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell:ImageCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath)
+        guard let cell:ImageCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
                 as? ImageCollectionViewCell else {
             return UICollectionViewCell()
         }
-        if albumNameList.isEmpty {
-            return UICollectionViewCell()
-        }
+        
         let assetResult:PHAsset = fetchResult[indexPath.item].object(at: 0)
-        OperationQueue().addOperation {
-            self.imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 140, height: 140), contentMode: .aspectFill, options: nil, resultHandler: {
-                image, _ in  OperationQueue.main.addOperation {
-                    cell.imageView.image = image
-                }
-            })
-        }
+        
+        cell.albumName.text = self.albumNameList[indexPath.item]
+        cell.albumCountTitle.text = String(self.albumCountList[indexPath.item])
+        imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: nil, resultHandler:{ assetResult, _ in cell.imageView?.image = assetResult
+//        OperationQueue().addOperation {
+//            self.imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: nil, resultHandler: {
+//                assetResult, _ in  OperationQueue.main.addOperation {
+//                    cell.imageView.image = assetResult
+//                    cell.albumName.text = self.albumNameList[indexPath.item]
+//                    cell.albumCountTitle.text = String(self.albumCountList[indexPath.item])
+                })
         return cell
-    }
+        }
+//            })
+//        }
+//        return cell
+//    }
     
     func requestCollection(){
-        self.fetchResult.removeAll()
-        self.albumNameList.removeAll()
-        self.albumCountList.removeAll()
-        self.albumCollectionList.removeAll()
-        
-        var album:[albumModel] = [albumModel]()
-        let realAlbum = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: nil)
-        
-        var album2:[albumModel] = [albumModel]()
-        
-        realAlbum.enumerateObjects {object,index,terminate in
-            let obj: PHAssetCollection = object
-            var assetCount = obj.estimatedAssetCount
-            if assetCount == NSNotFound {
-            let fetchOptions = PHFetchOptions()
-                fetchOptions.predicate = NSPredicate(format:"mediaType == %d", PHAssetMediaType.image.rawValue)
-                assetCount = PHAsset.fetchAssets(in: obj, options: fetchOptions).count
-            }
-            guard let localizedTitle = obj.localizedTitle else {
-                return
-            }
-            let otherAlbum = albumModel(name: localizedTitle, count: assetCount, collection: obj)
-            album2.append(contentsOf: album)
-//            if (assetCount > 0) {
-//                let otherAlbum =albumModel(name: localizedTitle, count: assetCount, collection: obj)
-//                album.append(contentsOf: album2)
-//            }
-            let fetchOptions = PHFetchOptions()
-            fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-            for i in album {
-                self.albumNameList.append(i.name)
-                self.albumCountList.append(i.count)
-                self.albumCollectionList.append(i.collection)
-            }
-            
-            for i in 0..<album.count {
-                if album.isEmpty == false {
-                    self.fetchResult.append(PHAsset.fetchAssets(in: realAlbum.object(at: i), options: fetchOptions))
-                }
-            }
+        print("222")
+//        self.fetchResult.removeAll()
+//        self.albumNameList.removeAll()
+//        self.albumCountList.removeAll()
+        //self.albumCollectionList.removeAll()
+        let cameraRoll: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil)
+        guard let cameraRollCollection = cameraRoll.firstObject else {
+            return
         }
-    }
-    
-    func fetchSmartCollection(with:PHAssetCollectionType,subtypes:[PHAssetCollectionSubtype]) ->[PHCollection]{
-        var collections:[PHAssetCollection] = []
-        let options = PHFetchOptions()
-        options.includeHiddenAssets = false
         
-        for subtype in subtypes {
-            if let collection = PHAssetCollection.fetchAssetCollections(with: with, subtype: subtype, options: options).firstObject{
-                collections.append(collection)
-            }
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        
+        let listFetchOptions = PHFetchOptions()
+        listFetchOptions.sortDescriptors = [NSSortDescriptor(key: "localizedTitle", ascending: false)]
+    
+        fetchResult.append(PHAsset.fetchAssets(in: cameraRollCollection, options: fetchOptions))
+        albumNameList.append("Camera Roll")
+        albumCountList.append(fetchResult[0].count)
+        
+        let albumList: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: listFetchOptions)
+        let albumCount = albumList.count
+        let album:[PHAssetCollection] = albumList.objects(at: IndexSet(0..<albumCount))
+           print("33333333")
+        
+        //분류
+        for i in  0..<albumCount {
+            fetchResult.append(PHAsset.fetchAssets(in: album[i], options: fetchOptions))
+            albumCountList.append(fetchResult[i+1].count)
+            albumNameList.append(album[i].localizedTitle!)
         }
-        return collections
-    }
-    
-   
-
-
-    
-
-    
-
+        }
 }
+
+    
+
+
 
 

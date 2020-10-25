@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RuK-NN-SRC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -21,34 +21,60 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2oU-Jr-rpe">
-                                    <size key="itemSize" width="140" height="136"/>
+                                    <size key="itemSize" width="170" height="164"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ImageCell" id="Sti-ye-6tD" customClass="ImageCollectionViewCell" customModule="MyAlbum" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Sti-ye-6tD" customClass="ImageCollectionViewCell" customModule="MyAlbum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rP6-hO-XWn" customClass="ImageCollectionViewCell" customModule="MyAlbum" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="wxt-05-zig">
-                                                    <rect key="frame" x="-137" y="-317" width="138" height="138"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sIT-ck-eZk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpZ-mA-6Mx">
+                                                    <rect key="frame" x="4" y="208" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZw-dh-ZOB">
+                                                    <rect key="frame" x="4" y="231" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="sIT-ck-eZk" secondAttribute="trailing" id="0Zt-pt-hba"/>
+                                                <constraint firstItem="sIT-ck-eZk" firstAttribute="top" secondItem="rP6-hO-XWn" secondAttribute="top" id="A8P-ps-vOQ"/>
+                                                <constraint firstItem="sIT-ck-eZk" firstAttribute="leading" secondItem="rP6-hO-XWn" secondAttribute="leading" id="AeZ-qh-XE6"/>
+                                                <constraint firstAttribute="bottom" secondItem="sIT-ck-eZk" secondAttribute="bottom" constant="60" id="vBx-mL-PyU"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="albumCountTitle" destination="nZw-dh-ZOB" id="Fw2-pI-vg4"/>
+                                                <outlet property="albumName" destination="PpZ-mA-6Mx" id="aQa-W9-zbk"/>
+                                                <outlet property="imageView" destination="sIT-ck-eZk" id="DNz-Eq-h1h"/>
+                                            </connections>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="140" height="140"/>
+                                        <size key="customSize" width="200" height="260"/>
                                         <connections>
-                                            <outlet property="imageView" destination="wxt-05-zig" id="mfS-M9-eXe"/>
+                                            <outlet property="albumCountTitle" destination="nZw-dh-ZOB" id="q2E-Ao-ANi"/>
+                                            <outlet property="albumName" destination="PpZ-mA-6Mx" id="Dqb-oY-xa2"/>
+                                            <outlet property="imageView" destination="sIT-ck-eZk" id="38m-FR-3tW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="p4p-2Q-EIe"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8bw-iz-Prq"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Mkk-8N-63E"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8FN-2j-fMg"/>
                                 </connections>
                             </collectionView>
                         </subviews>

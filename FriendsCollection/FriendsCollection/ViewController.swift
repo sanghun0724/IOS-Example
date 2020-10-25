@@ -34,6 +34,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource,UICollectionV
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         let flowLayout:UICollectionViewFlowLayout
         flowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets.zero
@@ -44,14 +45,17 @@ class ViewController: UIViewController ,UICollectionViewDataSource,UICollectionV
           
         flowLayout.estimatedItemSize = CGSize(width: halfwidth - 30, height: 90)
           //절반보다는 작게 가로 //예상 사이즈 
-        self.collectionView.collectionViewLayout = flowLayout
+      
         
         let jsonDecoder:JSONDecoder = JSONDecoder()
         guard let dataAsset:NSDataAsset = NSDataAsset(name: "friends") else {
             return
         }
-        
-        super.viewDidLoad()
+        do {
+            self.friend = try jsonDecoder.decode([Friends].self,from:dataAsset.data)
+        } catch {
+            print("dasd")
+        }
         // Do any additional setup after loading the view.
     }
 
