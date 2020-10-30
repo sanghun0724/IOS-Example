@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B607EF97254C4F8500326D1D /* CollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B607EF96254C4F8500326D1D /* CollectionViewDatasource.swift */; };
 		B65273FD25444D7E00519B96 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65273FC25444D7E00519B96 /* ImageCollectionViewCell.swift */; };
 		B6986E87253475BE00B17B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6986E86253475BE00B17B17 /* AppDelegate.swift */; };
 		B6986E89253475BE00B17B17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6986E88253475BE00B17B17 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B607EF96254C4F8500326D1D /* CollectionViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDatasource.swift; sourceTree = "<group>"; };
 		B65273FC25444D7E00519B96 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6986E83253475BE00B17B17 /* MyAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6986E86253475BE00B17B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				B6986E91253475C200B17B17 /* LaunchScreen.storyboard */,
 				B6986E94253475C200B17B17 /* Info.plist */,
 				B65273FC25444D7E00519B96 /* ImageCollectionViewCell.swift */,
+				B607EF96254C4F8500326D1D /* CollectionViewDatasource.swift */,
 			);
 			path = MyAlbum;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				B6986E87253475BE00B17B17 /* AppDelegate.swift in Sources */,
 				B65273FD25444D7E00519B96 /* ImageCollectionViewCell.swift in Sources */,
 				B6986E89253475BE00B17B17 /* SceneDelegate.swift in Sources */,
+				B607EF97254C4F8500326D1D /* CollectionViewDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
