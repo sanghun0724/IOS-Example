@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B607EFA1254C5C9E00326D1D /* CollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B607EFA0254C5C9E00326D1D /* CollectionViewDatasource.swift */; };
 		B607EFA7254C5D8300326D1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6986E8A253475BE00B17B17 /* ViewController.swift */; };
+		B607EFAA254C5E3400326D1D /* PhotoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B607EFA9254C5E3400326D1D /* PhotoDetail.swift */; };
 		B65273FD25444D7E00519B96 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65273FC25444D7E00519B96 /* ImageCollectionViewCell.swift */; };
 		B6986E87253475BE00B17B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6986E86253475BE00B17B17 /* AppDelegate.swift */; };
 		B6986E89253475BE00B17B17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6986E88253475BE00B17B17 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		B607EFA0254C5C9E00326D1D /* CollectionViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDatasource.swift; sourceTree = "<group>"; };
+		B607EFA9254C5E3400326D1D /* PhotoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetail.swift; sourceTree = "<group>"; };
 		B65273FC25444D7E00519B96 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6986E83253475BE00B17B17 /* MyAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6986E86253475BE00B17B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B607EFAC254C5E4800326D1D /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B65273FC25444D7E00519B96 /* ImageCollectionViewCell.swift */,
+				B607EFA0254C5C9E00326D1D /* CollectionViewDatasource.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		B6986E7A253475BE00B17B17 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +71,7 @@
 		B6986E85253475BE00B17B17 /* MyAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				B607EFAC254C5E4800326D1D /* CollectionView */,
 				B6986E86253475BE00B17B17 /* AppDelegate.swift */,
 				B6986E88253475BE00B17B17 /* SceneDelegate.swift */,
 				B6986E8A253475BE00B17B17 /* ViewController.swift */,
@@ -67,8 +79,7 @@
 				B6986E8F253475C200B17B17 /* Assets.xcassets */,
 				B6986E91253475C200B17B17 /* LaunchScreen.storyboard */,
 				B6986E94253475C200B17B17 /* Info.plist */,
-				B65273FC25444D7E00519B96 /* ImageCollectionViewCell.swift */,
-				B607EFA0254C5C9E00326D1D /* CollectionViewDatasource.swift */,
+				B607EFA9254C5E3400326D1D /* PhotoDetail.swift */,
 			);
 			path = MyAlbum;
 			sourceTree = "<group>";
@@ -146,6 +157,7 @@
 				B607EFA7254C5D8300326D1D /* ViewController.swift in Sources */,
 				B6986E87253475BE00B17B17 /* AppDelegate.swift in Sources */,
 				B65273FD25444D7E00519B96 /* ImageCollectionViewCell.swift in Sources */,
+				B607EFAA254C5E3400326D1D /* PhotoDetail.swift in Sources */,
 				B6986E89253475BE00B17B17 /* SceneDelegate.swift in Sources */,
 				B607EFA1254C5C9E00326D1D /* CollectionViewDatasource.swift in Sources */,
 			);
