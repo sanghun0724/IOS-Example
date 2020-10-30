@@ -20,21 +20,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     let imageManager:PHCachingImageManager = PHCachingImageManager()
     let nextCellIdentifier:String = "photoList"
     var selecetedcellIndex:Int = 0
-    var cellSize:CGSize?
-    //album
     var albumNameList:[String] = []
     var albumCountList:[Int] = []
-//    var albumCollectionList:[PHAssetCollection] = []
-    let half:Double = Double(UIScreen.main.bounds.width / 2.0 - 10)
-    override func viewWillAppear(_ animated: Bool) {
-        print("dasdasdawdsd")
-    }
+
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("sssssss")
         requestPhotosPermission()
-       
         UIdesine()
         collectionView.reloadData()
     }
@@ -87,7 +81,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         cell.albumCountTitle.text = String(self.albumCountList[indexPath.item])
         OperationQueue.main.addOperation
          {
-            self.imageManager.requestImage(for: assetResult, targetSize: CGSize(width: self.half, height: self.half), contentMode: .aspectFill, options: nil, resultHandler:{ assetResult, _ in cell.imageView?.image = assetResult   })
+            self.imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: nil, resultHandler:{ assetResult, _ in cell.imageView?.image = assetResult   })
         }
        
 //        OperationQueue().addOperation {
@@ -105,32 +99,28 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 //    }
     
     func requestCollection(){
-        print("222")
+        
 //        self.fetchResult.removeAll()
 //        self.albumNameList.removeAll()
 //        self.albumCountList.removeAll()
         //self.albumCollectionList.removeAll()
-        let cameraRoll: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil)
-        guard let cameraRollCollection = cameraRoll.firstObject else {
+        let assetCollection: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil)
+        guard let albumCollection = assetCollection.firstObject else {
             return
         }
         
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-        
         let listFetchOptions = PHFetchOptions()
         listFetchOptions.sortDescriptors = [NSSortDescriptor(key: "localizedTitle", ascending: false)]
-    
-        fetchResult.append(PHAsset.fetchAssets(in: cameraRollCollection, options: fetchOptions))
-        albumNameList.append("Camera Roll")
-        albumCountList.append(fetchResult[0].count)
-        
         let albumList: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: listFetchOptions)
         let albumCount = albumList.count
         let album:[PHAssetCollection] = albumList.objects(at: IndexSet(0..<albumCount))
-           print("33333333")
         
-        //분류
+        fetchResult.append(PHAsset.fetchAssets(in: albumCollection, options: fetchOptions))
+        albumNameList.append("Camera Roll")
+        albumCountList.append(fetchResult[0].count)
+        
         for i in  0..<albumCount {
             fetchResult.append(PHAsset.fetchAssets(in: album[i], options: fetchOptions))
             albumCountList.append(fetchResult[i+1].count)
@@ -139,15 +129,21 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         }
     
     func UIdesine() {
-        let flowlayout = UICollectionViewFlowLayout()
-               
-               flowlayout.sectionInset = UIEdgeInsets.zero
-               flowlayout.minimumLineSpacing = 30
-               flowlayout.minimumInteritemSpacing = 10
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
-               flowlayout.itemSize = CGSize(width: half, height: half + 50)
+        let collectionViewLayout:UICollectionViewFlowLayout = {
+            let layout = UICollectionViewFlowLayout()
+            layout.itemSize = CGSize(width: 200 , height: 260 )
+            layout.minimumLineSpacing = 20
+            layout.sectionInset = UIEdgeInsets.zero
+            layout.scrollDirection = .vertical
+            return layout
+        }()
+        collectionView.collectionViewLayout = collectionViewLayout
+        
                
-               self.collectionView.collectionViewLayout = flowlayout
+               
     }
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        guard let nextViewController:
