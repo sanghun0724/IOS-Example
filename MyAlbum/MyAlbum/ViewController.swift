@@ -10,15 +10,14 @@ import Photos
 
 class ViewController: UIViewController,UINavigationControllerDelegate{
     
-
+    
     let collectionViewDatasource = CollectionViewDatasource()
     @IBOutlet var collectionView:UICollectionView!
-
-//    let nextCellIdentifier:String = "photoList"
-//    var selecetedcellIndex:Int = 0
+    let nextCellIdentifier:String = "photoList"
+    var selecetedcellIndex:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("sssssss")
         collectionView.dataSource = collectionViewDatasource
         collectionView.delegate = collectionViewDatasource
         requestPhotosPermission()
@@ -28,7 +27,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate{
     
     private func requestPhotosPermission() {
         let photoAuthorizationStatusStatus = PHPhotoLibrary.authorizationStatus()
-
+        
         switch photoAuthorizationStatusStatus {
         case .authorized:
             print("승인되었습니다")
@@ -56,12 +55,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate{
             break
         }
     }
-   
-    
     
     func UIdesine() {
-       
-        
         let collectionViewLayout:UICollectionViewFlowLayout = {
             let layout = UICollectionViewFlowLayout()
             layout.itemSize = CGSize(width: 200 , height: 260 )
@@ -72,23 +67,24 @@ class ViewController: UIViewController,UINavigationControllerDelegate{
         }()
         collectionView.collectionViewLayout = collectionViewLayout
         
-               
-               
+        
+        
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let nextViewController:
-//
-//        guard let cell:ImageCollectionViewCell = sender as? ImageCollectionViewCell else {
-//             return
-//        }
-//        guard let indexValue:IndexPath = self.collectionView.indexPath(for: cell) else {
-//             return
-//        }
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == nextCellIdentifier {
+            guard let cell:ImageCollectionViewCell = sender as? ImageCollectionViewCell else {
+                return
+            }
+            guard let indexValue:IndexPath = self.collectionView.indexPath(for: cell) else {
+                return
+            }
+            
+        }
+        
+    }
 }
 
-    
+
 
 
 
