@@ -8,8 +8,8 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    @IBOutlet var imageView:UIImageView!
-    @IBOutlet var albumName:UILabel!
-    @IBOutlet var albumCountTitle:UILabel!
+    @IBOutlet weak var imageView:UIImageView!
+    @IBOutlet weak var albumName:UILabel!
+    @IBOutlet weak var albumCountTitle:UILabel!
     
 }

@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="Sti-ye-6tD" customClass="ImageCollectionViewCell" customModule="MyAlbum" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="Sti-ye-6tD" customClass="CollectionViewCell" customModule="MyAlbum" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rP6-hO-XWn" customClass="ImageCollectionViewCell" customModule="MyAlbum" customModuleProvider="target">
@@ -38,14 +38,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpZ-mA-6Mx">
-                                                    <rect key="frame" x="4" y="202" width="150" height="21"/>
+                                                    <rect key="frame" x="4" y="202" width="158" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZw-dh-ZOB">
-                                                    <rect key="frame" x="4" y="222" width="150" height="21"/>
+                                                    <rect key="frame" x="4" y="231" width="158" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -58,17 +58,12 @@
                                                 <constraint firstItem="sIT-ck-eZk" firstAttribute="leading" secondItem="rP6-hO-XWn" secondAttribute="leading" id="AeZ-qh-XE6"/>
                                                 <constraint firstAttribute="bottom" secondItem="sIT-ck-eZk" secondAttribute="bottom" constant="60" id="vBx-mL-PyU"/>
                                             </constraints>
-                                            <connections>
-                                                <outlet property="albumCountTitle" destination="nZw-dh-ZOB" id="Fw2-pI-vg4"/>
-                                                <outlet property="albumName" destination="PpZ-mA-6Mx" id="aQa-W9-zbk"/>
-                                                <outlet property="imageView" destination="sIT-ck-eZk" id="DNz-Eq-h1h"/>
-                                            </connections>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="200" height="260"/>
                                         <connections>
-                                            <outlet property="albumCountTitle" destination="nZw-dh-ZOB" id="q2E-Ao-ANi"/>
-                                            <outlet property="albumName" destination="PpZ-mA-6Mx" id="Dqb-oY-xa2"/>
-                                            <outlet property="imageView" destination="sIT-ck-eZk" id="38m-FR-3tW"/>
+                                            <outlet property="albumCountTitle" destination="nZw-dh-ZOB" id="uZA-DB-bxm"/>
+                                            <outlet property="albumName" destination="PpZ-mA-6Mx" id="Ujk-L0-J25"/>
+                                            <outlet property="imageView" destination="sIT-ck-eZk" id="Bpk-8G-3XJ"/>
                                             <segue destination="3yP-0z-hoR" kind="show" id="XNl-Sm-DDT"/>
                                         </connections>
                                     </collectionViewCell>
@@ -115,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo List-->
         <scene sceneID="MGU-Sr-fqw">
             <objects>
-                <viewController id="3yP-0z-hoR" sceneMemberID="viewController">
+                <viewController id="3yP-0z-hoR" customClass="PhotoList" customModule="MyAlbum" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hOB-Z0-s8N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -130,7 +125,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoListCell" id="2yd-Md-TfJ">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoListCell" id="2yd-Md-TfJ" customClass="PhotoListCell" customModule="MyAlbum" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K7b-di-90U">
@@ -148,6 +143,9 @@
                                         <constraint firstItem="QRr-an-eIr" firstAttribute="leading" secondItem="K7b-di-90U" secondAttribute="leading" id="pHT-Zh-RLh"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="ImageList" destination="QRr-an-eIr" id="KYD-1V-MCv"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kk3-Zm-FO6">
@@ -171,6 +169,9 @@
                     <navigationItem key="navigationItem" id="MtD-An-km8">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="IeX-Ia-322"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="hOB-Z0-s8N" id="gbJ-L4-E3k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxk-jA-GMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

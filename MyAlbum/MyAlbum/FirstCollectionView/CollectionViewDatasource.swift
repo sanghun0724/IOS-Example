@@ -14,25 +14,6 @@ class CollectionViewDatasource:NSObject,UICollectionViewDataSource,UICollectionV
     var albumCountList:[Int] = []
     let collectionIdentifier = "photoCell"
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fetchResult.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell:CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionIdentifier, for: indexPath)
-                as? CollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        cell.albumName.text = self.albumNameList[indexPath.item]
-        cell.albumCountTitle.text = String(self.albumCountList[indexPath.item])
-        
-        let assetResult:PHAsset = fetchResult[indexPath.item].object(at: 0)
-        OperationQueue.main.addOperation
-        {
-            self.imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: nil, resultHandler:{ assetResult, _ in cell.imageView?.image = assetResult   })
-        }
-        return cell
-    }
     func requestCollection(){
         //        self.fetchResult.removeAll()
         //        self.albumNameList.removeAll()
@@ -53,11 +34,31 @@ class CollectionViewDatasource:NSObject,UICollectionViewDataSource,UICollectionV
         fetchResult.append(PHAsset.fetchAssets(in: albumCollection, options: fetchOptions))
         albumNameList.append("Camera Roll")
         albumCountList.append(fetchResult[0].count)
+        
         for i in  0..<albumCount {
             fetchResult.append(PHAsset.fetchAssets(in: album[i], options: fetchOptions))
             albumCountList.append(fetchResult[i+1].count)
             albumNameList.append(album[i].localizedTitle!)
         }
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return fetchResult.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell:CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionIdentifier, for: indexPath)
+                as? CollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.albumName.text = self.albumNameList[indexPath.item]
+        cell.albumCountTitle.text = String(self.albumCountList[indexPath.item])
+        
+        let assetResult:PHAsset = fetchResult[indexPath.item].object(at: 0)
+        OperationQueue.main.addOperation
+        {
+            self.imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: nil, resultHandler:{ assetResult, _ in cell.imageView?.image = assetResult   })
+        }
+        return cell
     }
 }
 
