@@ -6,13 +6,17 @@
 //
 
 import UIKit
-
-class PhotoDetail: UIViewController {
-
+import Photos
+class PhotoList: UIViewController {
+    
+    var mainTitle:String?
+    var indexThing:Int?
+    var albumThing:PHFetchResult<PHAsset>?
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
 

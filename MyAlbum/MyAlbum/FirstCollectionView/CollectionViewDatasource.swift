@@ -12,21 +12,21 @@ class CollectionViewDatasource:NSObject,UICollectionViewDataSource,UICollectionV
     let imageManager:PHCachingImageManager = PHCachingImageManager()
     var albumNameList:[String] = []
     var albumCountList:[Int] = []
+    let collectionIdentifier = "photoCell"
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return fetchResult.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell:ImageCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-                as? ImageCollectionViewCell else {
+        guard let cell:CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionIdentifier, for: indexPath)
+                as? CollectionViewCell else {
             return UICollectionViewCell()
         }
-        
-        let assetResult:PHAsset = fetchResult[indexPath.item].object(at: 0)
         cell.albumName.text = self.albumNameList[indexPath.item]
         cell.albumCountTitle.text = String(self.albumCountList[indexPath.item])
         
+        let assetResult:PHAsset = fetchResult[indexPath.item].object(at: 0)
         OperationQueue.main.addOperation
         {
             self.imageManager.requestImage(for: assetResult, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: nil, resultHandler:{ assetResult, _ in cell.imageView?.image = assetResult   })

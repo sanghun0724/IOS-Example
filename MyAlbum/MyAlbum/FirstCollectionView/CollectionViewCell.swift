@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageCollectionViewCell: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView:UIImageView!
     @IBOutlet var albumName:UILabel!
     @IBOutlet var albumCountTitle:UILabel!

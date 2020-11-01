@@ -14,14 +14,14 @@ class ViewController: UIViewController,UINavigationControllerDelegate{
     let collectionViewDatasource = CollectionViewDatasource()
     @IBOutlet var collectionView:UICollectionView!
     let nextCellIdentifier:String = "photoList"
-    var selecetedcellIndex:Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = collectionViewDatasource
         collectionView.delegate = collectionViewDatasource
         requestPhotosPermission()
-        UIdesine()
+        UIDesine()
         collectionView.reloadData()
     }
     
@@ -56,7 +56,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate{
         }
     }
     
-    func UIdesine() {
+    func UIDesine() {
         let collectionViewLayout:UICollectionViewFlowLayout = {
             let layout = UICollectionViewFlowLayout()
             layout.itemSize = CGSize(width: 200 , height: 260 )
@@ -66,21 +66,23 @@ class ViewController: UIViewController,UINavigationControllerDelegate{
             return layout
         }()
         collectionView.collectionViewLayout = collectionViewLayout
-        
-        
-        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == nextCellIdentifier {
-            guard let cell:ImageCollectionViewCell = sender as? ImageCollectionViewCell else {
+            guard let cell:CollectionViewCell = sender as? CollectionViewCell else {
                 return
             }
             guard let indexValue:IndexPath = self.collectionView.indexPath(for: cell) else {
                 return
             }
-            
+            guard let nextViewController:PhotoList = segue.destination as? PhotoList else {
+                return
+            }
+            nextViewController.mainTitle = collectionViewDatasource.albumNameList[indexValue.item]
+            nextViewController.albumThing = collectionViewDatasource.fetchResult[indexValue.item]
+            nextViewController.indexThing = indexValue.item
         }
-        
     }
 }
 
