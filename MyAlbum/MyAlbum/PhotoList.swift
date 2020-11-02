@@ -14,18 +14,18 @@ class PhotoList: UIViewController,UICollectionViewDataSource {
     var indexThing:Int!
     var albumThing:PHFetchResult<PHAsset>!
    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
-
     let photoListCellIdentifier:String = "photoListCell"
     let cachingManager:PHCachingImageManager = PHCachingImageManager()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("\(albumThing.count)")
+    }
+    
+
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return albumThing.count
+        return self.albumThing.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
