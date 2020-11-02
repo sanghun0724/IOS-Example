@@ -39,12 +39,15 @@ class CollectionViewDatasource:NSObject,UICollectionViewDataSource,UICollectionV
         fetchResult.append(PHAsset.fetchAssets(in: albumCollection, options: fetchOptions))
         albumNameList.append("Camera Roll")
         albumCountList.append(fetchResult[0].count)
+        photoCollection.append(albumCollection)
         
         for i in  0..<albumCount {
             fetchResult.append(PHAsset.fetchAssets(in: album[i], options: fetchOptions))
             albumCountList.append(fetchResult[i+1].count)
             albumNameList.append(album[i].localizedTitle!)
+            photoCollection.append(album[i])
         }
+        
 //        let test = assetCollection.object(at: i)
 //        photoCollection.append(test)
             
