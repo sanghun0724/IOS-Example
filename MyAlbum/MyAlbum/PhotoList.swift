@@ -9,7 +9,7 @@ import UIKit
 import Photos
 class PhotoList: UIViewController,UICollectionViewDataSource {
     
-    @IBOutlet var collectionView:UICollectionView!
+    @IBOutlet var photoCollectionView:UICollectionView!
     var mainTitle:String?
     var indexThing:Int!
     var albumThing:PHFetchResult<PHAsset>!
@@ -19,7 +19,7 @@ class PhotoList: UIViewController,UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(albumThing.count)")
+       
     }
     
 
