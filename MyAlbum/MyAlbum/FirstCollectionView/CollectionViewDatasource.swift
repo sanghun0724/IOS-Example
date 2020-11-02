@@ -12,6 +12,7 @@ class CollectionViewDatasource:NSObject,UICollectionViewDataSource,UICollectionV
     let imageManager:PHCachingImageManager = PHCachingImageManager()
     var albumNameList:[String] = []
     var albumCountList:[Int] = []
+    var photoCollection:[PHAssetCollection] = []
     let collectionIdentifier = "photoCell"
     
     func requestCollection(){
@@ -23,6 +24,10 @@ class CollectionViewDatasource:NSObject,UICollectionViewDataSource,UICollectionV
         guard let albumCollection = assetCollection.firstObject else {
             return
         }
+        
+            
+        
+        
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let listFetchOptions = PHFetchOptions()
@@ -40,7 +45,13 @@ class CollectionViewDatasource:NSObject,UICollectionViewDataSource,UICollectionV
             albumCountList.append(fetchResult[i+1].count)
             albumNameList.append(album[i].localizedTitle!)
         }
+//        let test = assetCollection.object(at: i)
+//        photoCollection.append(test)
+            
+        
+        
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return fetchResult.count
     }

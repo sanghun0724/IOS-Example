@@ -119,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dW9-jD-G0b">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JFP-y2-dEd">
                                     <size key="itemSize" width="128" height="128"/>
@@ -156,28 +156,36 @@
                                     <outlet property="delegate" destination="3yP-0z-hoR" id="cfO-d9-WU4"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vje-Ns-QlT">
-                                <rect key="frame" x="0.0" y="806" width="414" height="90"/>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
-                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00v-x9-esF">
+                                <rect key="frame" x="0.0" y="823" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="과거순" width="400" id="yXK-hh-3jh">
+                                        <inset key="imageInsets" minX="100" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="largeContentSizeImageInsets" minX="100" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="changeList:" destination="3yP-0z-hoR" id="lSa-IO-5so"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Olo-mN-uNj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dW9-jD-G0b" firstAttribute="top" secondItem="Olo-mN-uNj" secondAttribute="top" id="731-Qs-1GI"/>
-                            <constraint firstItem="Vje-Ns-QlT" firstAttribute="top" secondItem="Olo-mN-uNj" secondAttribute="top" constant="718" id="E6R-VC-bUA"/>
                             <constraint firstItem="dW9-jD-G0b" firstAttribute="trailing" secondItem="Olo-mN-uNj" secondAttribute="trailing" id="Hxi-eP-Vjt"/>
-                            <constraint firstAttribute="bottom" secondItem="Vje-Ns-QlT" secondAttribute="bottom" id="KxE-MZ-w95"/>
                             <constraint firstItem="dW9-jD-G0b" firstAttribute="leading" secondItem="Olo-mN-uNj" secondAttribute="leading" id="SNh-ZF-ANt"/>
                             <constraint firstItem="Olo-mN-uNj" firstAttribute="bottom" secondItem="dW9-jD-G0b" secondAttribute="bottom" id="h67-7I-mWd"/>
-                            <constraint firstItem="Olo-mN-uNj" firstAttribute="trailing" secondItem="Vje-Ns-QlT" secondAttribute="trailing" id="k9V-xI-Bcr"/>
-                            <constraint firstItem="Vje-Ns-QlT" firstAttribute="leading" secondItem="Olo-mN-uNj" secondAttribute="leading" id="wr6-GD-Zc3"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="MtD-An-km8">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="IeX-Ia-322"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="listedButton" destination="yXK-hh-3jh" id="HdY-yC-qMd"/>
                         <outlet property="photoCollectionView" destination="dW9-jD-G0b" id="vuA-J3-qvw"/>
                     </connections>
                 </viewController>
@@ -232,9 +240,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
