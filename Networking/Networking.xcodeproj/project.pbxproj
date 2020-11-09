@@ -14,6 +14,7 @@
 		B697109D2559333900E9580D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B697109C2559333900E9580D /* Assets.xcassets */; };
 		B69710A02559333900E9580D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B697109E2559333900E9580D /* LaunchScreen.storyboard */; };
 		B69710A92559343A00E9580D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69710A82559343A00E9580D /* Model.swift */; };
+		B69710AC2559909700E9580D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69710AB2559909700E9580D /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B697109F2559333900E9580D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B69710A12559333900E9580D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B69710A82559343A00E9580D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B69710AB2559909700E9580D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B69710932559333800E9580D /* AppDelegate.swift */,
 				B69710952559333800E9580D /* SceneDelegate.swift */,
 				B69710972559333800E9580D /* ViewController.swift */,
+				B69710AB2559909700E9580D /* Request.swift */,
 				B69710A82559343A00E9580D /* Model.swift */,
 				B69710992559333800E9580D /* Main.storyboard */,
 				B697109C2559333900E9580D /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			files = (
 				B69710982559333800E9580D /* ViewController.swift in Sources */,
 				B69710942559333800E9580D /* AppDelegate.swift in Sources */,
+				B69710AC2559909700E9580D /* Request.swift in Sources */,
 				B69710962559333800E9580D /* SceneDelegate.swift in Sources */,
 				B69710A92559343A00E9580D /* Model.swift in Sources */,
 			);

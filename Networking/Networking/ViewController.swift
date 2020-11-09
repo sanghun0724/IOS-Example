@@ -12,40 +12,26 @@ class ViewController: UIViewController,
     @IBOutlet weak var tableView:UITableView!
     let cellIentifier:String = "friendcell"
     var friends:[Friend] = []
-    
+     //노티피케이션 스트링값이나 키값들 상수로 정리 잘해두고 // 특징으로는 코드가 잘분산되므로 간단한 경우에는 안쓰는 경우가 많지만 한번에 여러가지 인스턴스를 처리할때에는 요긴함!
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let url: URL = URL(string: "") else {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRecieveFriendsNotification(_:)), name: DidReceiveFriendsNotification, object: nil)
+    }
+    
+    @objc func didRecieveFriendsNotification(_ noti: Notification) {
+        guard let friends:[Friend] = noti.userInfo?["friends"] as? [Friend] else {
             return
         }
+        self.friends = friends
         
-        let session:URLSession = URLSession(configuration: .default)
-        let dataTask:URLSessionTask = session.dataTask(with: url) {
-            (data:Data?,respons: URLResponse?,error:Error?) in
-            
-            if let eerror = error {
-                print(error?.localizedDescription)
-                return
-            }
-            
-            guard let data = data else {
-                return
-            }
-            
-            do{
-                let apiResponse:APIResponse = try JSONDecoder().decode(APIResponse.self, from: data)
-                self.friends = apiResponse.results
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-            catch(let err) {
-                print(err.localizedDescription)
-            }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
-        dataTask.resume()
     }
-
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friends.count
     }
@@ -80,7 +66,9 @@ class ViewController: UIViewController,
         
         return cell
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        requestFriends()
+    }
 
 }
 
