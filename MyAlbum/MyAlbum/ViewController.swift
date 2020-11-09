@@ -79,10 +79,12 @@ class ViewController: UIViewController,UINavigationControllerDelegate{
             guard let nextViewController:PhotoList = segue.destination as? PhotoList else {
                 return
             }
+            
             nextViewController.mainTitle = collectionViewDatasource.albumNameList[indexValue.item]
             nextViewController.albumThing = collectionViewDatasource.fetchResult[indexValue.item]
             nextViewController.indexThing = indexValue.item
             nextViewController.photoAssetCollection = collectionViewDatasource.photoCollection[indexValue.item]
+            
         }
     }
 }
