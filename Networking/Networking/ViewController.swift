@@ -12,11 +12,14 @@ class ViewController: UIViewController,
     @IBOutlet weak var tableView:UITableView!
     let cellIentifier:String = "friendcell"
     var friends:[Friend] = []
-     //노티피케이션 스트링값이나 키값들 상수로 정리 잘해두고 // 특징으로는 코드가 잘분산되므로 간단한 경우에는 안쓰는 경우가 많지만 한번에 여러가지 인스턴스를 처리할때에는 요긴함!
+     //노티피케이션 스트링값이나 키값들 상수로 정리 잘해두고 //특징으로는 코드가 잘분산되므로 간단한 경우에는 안쓰는 경우가 많지만 한번에 여러가지 인스턴스를 처리할때에는 요긴함!
+    override func viewDidAppear(_ animated: Bool) {
+        requestFriends()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didRecieveFriendsNotification(_:)), name: DidReceiveFriendsNotification, object: nil)
+        //노티피케이션센터를 통해서 "나 이제 들을거야!" 리시브
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRecieveFriendsNotification(_:)), name: DidRecieveFriendsNotification, object: nil)
     }
     
     @objc func didRecieveFriendsNotification(_ noti: Notification) {
@@ -61,14 +64,13 @@ class ViewController: UIViewController,
                         cell.layoutIfNeeded()
                     }
                 }
-            }//이미지 잘안뜰시 플레이스홀더나 그런걸로 나오기전 이미지 설정해주는 것도좋음
+            }//이미지 잘안뜰시 플레이스홀더나 그런걸로 나오기전 이미지 설정해주는 것도좋음//인디케이터?
         }
         
         return cell
     }
-    override func viewDidAppear(_ animated: Bool) {
-        requestFriends()
-    }
+    
+   
 
 }
 

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct APIResponse:Codable {
+struct APIResponse:Decodable {
     let results:[Friend]
 }
 
-struct Friend:Codable {
-    struct Name:Codable {
+struct Friend:Decodable {
+    struct Name:Decodable {
         let title:String
         let first:String
         let last:String
@@ -22,7 +22,7 @@ struct Friend:Codable {
         }
     }
     
-    struct Picture:Codable {
+    struct Picture:Decodable {
         let large:String
         let medium:String
         let thumnail:String

@@ -7,10 +7,11 @@
 
 import Foundation
 
-let DidReceiveFriendsNotification:Notification.Name = Notification.Name("DidRecieveFriends")
+let DidRecieveFriendsNotification:Notification.Name = Notification.Name("DidRecieveFriends")
 
 func requestFriends() {
-    guard let url: URL = URL(string: "") else {
+    guard let url: URL = URL(string: "https://randomuser.me/api/?results=20&inc=name,email,picture") else {
+        print("123")
         return
     }
     
@@ -19,22 +20,29 @@ func requestFriends() {
         (data:Data?,respons: URLResponse?,error:Error?) in
         
         if let error = error {
+            print("1234")
             print(error.localizedDescription)
             return
         }
         
         guard let data = data else {
+            print("12345")
             return
         }
         
-        do{
+        do {
             let apiResponse:APIResponse = try JSONDecoder().decode(APIResponse.self, from: data)
-            NotificationCenter.default.post(name: DidReceiveFriendsNotification, object: nil,userInfo: ["friends":apiResponse.results])
-          
+            
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: DidRecieveFriendsNotification, object: nil,userInfo: ["friends":apiResponse.results])
+            }
         }
+        
         catch(let err) {
+            print("여기서 에러")
             print(err.localizedDescription)
         }
     }
+    
     dataTask.resume()
 }
