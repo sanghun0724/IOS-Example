@@ -1,0 +1,6 @@
+framework module Pods_BoostCampInterview {
+  umbrella header "Pods-BoostCampInterview-umbrella.h"
+
+  export *
+  module * { export * }
+}
