@@ -7,10 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,UISearchBarDelegate {
     
     @IBOutlet var table:UITableView!
     @IBOutlet var field:UITextField!
+    @IBOutlet var searchBar:UISearchBar!
     
     var data = [String]()
     var filterData = [String]()
@@ -80,5 +81,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
+    //MARK: Search Bar config
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        <#code#>
+    }
 }
+
 
