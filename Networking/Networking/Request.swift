@@ -31,7 +31,7 @@ func requestFriends() {
         }
         
         do {
-            let apiResponse:APIResponse = try JSONDecoder().decode(APIResponse.self, from: data)
+            let apiResponse:APIResponse = try! JSONDecoder().decode(APIResponse.self, from: data)
             
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name: DidRecieveFriendsNotification, object: nil,userInfo: ["friends":apiResponse.results])
