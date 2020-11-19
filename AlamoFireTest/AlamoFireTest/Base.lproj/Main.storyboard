@@ -21,6 +21,9 @@
                                 <rect key="frame" x="10" y="89" width="394" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="HTTP 서버에 요청하기"/>
+                                <connections>
+                                    <action selector="onBtnRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k4z-Hk-TGK"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="서버통신결과" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-VH-URe">
                                 <rect key="frame" x="10" y="167" width="394" height="545"/>
@@ -42,6 +45,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JUT-uh-7MB" secondAttribute="trailing" constant="10" id="xaN-Yx-Lze"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="4FY-VH-URe" id="aBR-W3-gtN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
