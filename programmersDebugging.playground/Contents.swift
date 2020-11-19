@@ -1,17 +1,10 @@
 import UIKit
 
 
-func solution(_ num:Int) -> Int {
-  var count = 0
-  var number = num
-    while number > 1 {
-    number % 2 == 0 ? (number = number / 2) : (number = number * 3 + 1)
-        count+=1
-        
-    }
+func solution(_ arr1:[[Int]], _ arr2:[[Int]]) -> [[Int]] {
+    print(zip(arr1, arr2))
+    print(zip(arr1, arr2).map{zip($0,$1)})
     
-    return count >= 500 ? -1 : count
 }
-    
 
 
